@@ -1,2 +1,36 @@
 # SGRS
 Breaking trhough SGRS 2019 Challenge
+
+## Ressources utiles
+
+### Number theory
+
+1 [Crazy numbers](https://www.crazy-numbers.com/)
+
+
+## Astuces fréquentes auxquelles penser
+
+1. Anagrammes, permutation de lettres
+2. Chiffre de César, ou rotation / décalage de lettres
+3. Chiffre de Vigenere, par clé
+4. Rotation des lettres dans un mot
+5. Les notes de musique
+6. Les éléments du tableau périodique
+7. Jeux en général: Combat naval, Echec, Stratego
+8. Codages tels que le [Braille](https://fr.wikipedia.org/wiki/Braille), le [Morse](https://fr.wikipedia.org/wiki/Code_Morse_international), les [Tap codes](https://fr.wikipedia.org/wiki/Tap_code), les [Sémaphores](https://fr.wikipedia.org/wiki/Alphabet_s%C3%A9maphore)
+
+
+## progrès
+
+| 1-10 | 11-20 | 21-30 | 31-40 | 41-43 |
+|  --- | --- | ---   | ---   | ---   |
+| 1:X | 11:X | 21:X | 31:X | 41:X |
+| 2:X | 12:X | 22:X | 32:X | 42:X |
+| 3:X | 13:X | 23:X | 33:X | 43:X |
+| 4:X | 14:X | 24:X | 34:X | 
+| 5:X | 15:X | 25:X | 35:X | 
+| 6:X | 16:X | 26:X | 36:X | 
+| 7:X | 17:X | 27:X | 37:X | 
+| 8:X | 18:X | 28:X | 38:X | 
+| 9:X | 19:X | 29:X | 39:X | 
+| 10:X | 20:X | 30:X | 40:X | 
