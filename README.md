@@ -7,6 +7,10 @@ Breaking trhough SGRS 2019 Challenge
 
 1 [Crazy numbers](https://www.crazy-numbers.com/)
 
+### Codage et annagrammes
+
+1 [DCode](https://www.dcode.fr/)
+
 
 ## Astuces fréquentes auxquelles penser
 
