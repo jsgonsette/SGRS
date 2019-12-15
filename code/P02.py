@@ -16,7 +16,7 @@ def encode_string (string):
 
     return output
 
-def decode_string (string):
+def print_alphabet ():
 
     encoding = {chr (ord ('a') + i): chr (ord ('a') + encode (i+1)-1) for i in range (26)}
     # decoding = {encoding [l]: l for l in encoding}
@@ -25,6 +25,6 @@ def decode_string (string):
         print (k + ' --> ' + encoding [k])
 
 
+print_alphabet ()
 print (encode_string ('DGWNJIEUOXEGJNI'))
-# https://www.crazy-numbers.com/en/33418
 
