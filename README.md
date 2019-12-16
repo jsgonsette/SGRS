@@ -14,7 +14,7 @@ Breaking trhough SGRS 2019 Challenge
 
 ## Astuces fréquentes auxquelles penser
 
-1. Aller voir la [version néerlandaise](doc/SGRS 2019 - NL.pdf) du questionnaire. Certains problèmes sont différents pour des raisons de langues. Ca donne de l'information.
+1. Aller voir la [version néerlandaise](doc/SGRS%202019%20-%20NL.pdf) du questionnaire. Certains problèmes sont différents pour des raisons de langues. Ca donne de l'information.
 2. Anagrammes, permutation de lettres
 3. Chiffre de César, ou rotation / décalage de lettres
 4. Chiffre de Vigenere, par clé
