@@ -3,13 +3,8 @@ Breaking trhough SGRS 2019 Challenge
 
 ## Ressources utiles
 
-### Number theory
-
-1 [Crazy numbers](https://www.crazy-numbers.com/)
-
-### Codage et annagrammes
-
-1 [DCode](https://www.dcode.fr/)
+1. Number theory: [Crazy numbers](https://www.crazy-numbers.com/)
+2. Codage et annagrammes: [DCode](https://www.dcode.fr/)
 
 
 ## Astuces fréquentes auxquelles penser
@@ -40,5 +35,5 @@ Breaking trhough SGRS 2019 Challenge
 | 6:X | 16:X | 26:X | 36:X | 
 | 7:X | 17:X | 27:X | 37:X | 
 | [8:V](wiki/P08.md) | 18:X | 28:X | [38:V](wiki/P38.md) | 
-| 9:X | 19:X | 29:X | [39:O](wiki/P39.md) | 
+| 9:X | 19:X | 29:X | [39:V](wiki/P39.md) | 
 | 10:X | [20:X](wiki/P20.md) | 30:X | 40:X | 
