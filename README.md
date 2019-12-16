@@ -14,14 +14,15 @@ Breaking trhough SGRS 2019 Challenge
 
 ## Astuces fréquentes auxquelles penser
 
-1. Anagrammes, permutation de lettres
-2. Chiffre de César, ou rotation / décalage de lettres
-3. Chiffre de Vigenere, par clé
-4. Rotation des lettres dans un mot
-5. Les notes de musique
-6. Les éléments du tableau périodique
-7. Jeux en général: Combat naval, Echec, Stratego
-8. Codages tels que le [Braille](https://fr.wikipedia.org/wiki/Braille), le [Morse](https://fr.wikipedia.org/wiki/Code_Morse_international), les [Tap codes](https://fr.wikipedia.org/wiki/Tap_code), les [Sémaphores](https://fr.wikipedia.org/wiki/Alphabet_s%C3%A9maphore)
+1. Aller voir la version néerlandaise du questionnaire. Certains problèmes sont différents pour des raisons de langues. Ca donne de l'information.
+2. Anagrammes, permutation de lettres
+3. Chiffre de César, ou rotation / décalage de lettres
+4. Chiffre de Vigenere, par clé
+5. Rotation des lettres dans un mot
+6. Les notes de musique
+7. Les éléments du tableau périodique
+8. Jeux en général: Combat naval, Echec, Stratego
+9. Codages tels que le [Braille](https://fr.wikipedia.org/wiki/Braille), le [Morse](https://fr.wikipedia.org/wiki/Code_Morse_international), les [Tap codes](https://fr.wikipedia.org/wiki/Tap_code), les [Sémaphores](https://fr.wikipedia.org/wiki/Alphabet_s%C3%A9maphore)
 
 
 ## Progrès
