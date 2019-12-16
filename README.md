@@ -39,6 +39,6 @@ Breaking trhough SGRS 2019 Challenge
 | 5:X | 15:X | 25:X | 35:X | 
 | 6:X | 16:X | 26:X | 36:X | 
 | 7:X | 17:X | 27:X | 37:X | 
-| 8:X | 18:X | 28:X | [38:V](wiki/P38.md) | 
+| [8:O](wiki/P08.md) | 18:X | 28:X | [38:V](wiki/P38.md) | 
 | 9:X | 19:X | 29:X | [39:O](wiki/P39.md) | 
 | 10:X | [20:X](wiki/P20.md) | 30:X | 40:X | 
