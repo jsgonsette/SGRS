@@ -1,5 +1,5 @@
-# SGRS
-Breaking trhough SGRS 2019 Challenge
+# SGRS 2019
+Breaking through SGRS 2019 Challenge
 
 ## Ressources utiles
 
@@ -9,7 +9,7 @@ Breaking trhough SGRS 2019 Challenge
 
 ## Astuces fréquentes auxquelles penser
 
-1. Aller voir la [version néerlandaise](doc/SGRS%202019%20-%20NL.pdf) du questionnaire. Certains problèmes sont différents pour des raisons de langues. Ca donne de l'information.
+1. Aller voir la [version néerlandaise](doc/SGRS%202019%20-%20NL.pdf) du questionnaire. Certains problèmes sont différents pour des raisons de langue. Ca donne de l'information.
 2. Anagrammes, permutation de lettres
 3. Chiffre de César, ou rotation / décalage de lettres
 4. Chiffre de Vigenere, par clé
@@ -21,6 +21,8 @@ Breaking trhough SGRS 2019 Challenge
 
 
 ## Progrès
+La table ci dessous permet d'avoir un aperçu rapide de l'état d'avancement. Ajoutez les liens vers les pages wiki dès que vous avez quelques éléments de départ pour avancer.
+
 + X: Non résolu
 + O: Partiellement résolu
 + V: Résolu
