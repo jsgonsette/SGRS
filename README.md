@@ -1,5 +1,5 @@
 # SGRS 2019
-Breaking through SGRS 2019 Challenge
+Breaking through SGRS 2019 Challenge - [lien](https://www.mil.be/fr/communiques-presse/les-enigmes-du-sgrs-sont-de-retour)
 
 ## Ressources utiles
 
