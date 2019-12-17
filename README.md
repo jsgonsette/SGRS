@@ -1,5 +1,5 @@
-# SGRS
-Breaking trhough SGRS 2019 Challenge
+# SGRS 2019
+Breaking through SGRS 2019 Challenge
 
 ## Ressources utiles
 
@@ -9,7 +9,7 @@ Breaking trhough SGRS 2019 Challenge
 
 ## Astuces fréquentes auxquelles penser
 
-1. Aller voir la [version néerlandaise](doc/SGRS%202019%20-%20NL.pdf) du questionnaire. Certains problèmes sont différents pour des raisons de langues. Ca donne de l'information.
+1. Aller voir la [version néerlandaise](doc/SGRS%202019%20-%20NL.pdf) du questionnaire. Certains problèmes sont différents pour des raisons de langue. Ca donne de l'information.
 2. Anagrammes, permutation de lettres
 3. Chiffre de César, ou rotation / décalage de lettres
 4. Chiffre de Vigenere, par clé
@@ -21,6 +21,8 @@ Breaking trhough SGRS 2019 Challenge
 
 
 ## Progrès
+La table ci dessous permet d'avoir un aperçu rapide de l'état d'avancement. Ajoutez les liens vers les pages wiki dès que vous avez quelques éléments de départ pour avancer.
+
 + X: Non résolu
 + O: Partiellement résolu
 + V: Résolu
@@ -28,7 +30,7 @@ Breaking trhough SGRS 2019 Challenge
 | 1-10 | 11-20 | 21-30 | 31-40 | 41-43 |
 |  --- | --- | ---   | ---   | ---   |
 | 1:X | 11:X | 21:X | 31:X | 41:X |
-| [2:V](wiki/P02.md) | 12:X | 22:X | 32:X | 42:X |
+| [2:V](wiki/P02.md) | 12:X | 22:X | [32:O](wiki/P32.md) | 42:X |
 | [3:O](wiki/P03.md) | 13:X | 23:X | 33:X | 43:X |
 | [4:V](wiki/P04.md) | 14:X | 24:X | 34:X | 
 | [5:O](wiki/P05.md) | 15:X | 25:X | 35:X | 
