@@ -29,7 +29,7 @@ La table ci dessous permet d'avoir un aperçu rapide de l'état d'avancement. Aj
 
 | 1-10 | 11-20 | 21-30 | 31-40 | 41-43 |
 |  --- | --- | ---   | ---   | ---   |
-| 1:X | 11:X | 21:X | 31:X | 41:X |
+| 1:X | 11:X | 21:X | 31:X | [41:O](wiki/P41.md) |
 | [2:V](wiki/P02.md) | 12:X | [22:O](wiki/P22.md) | [32:O](wiki/P32.md) | 42:X |
 | [3:O](wiki/P03.md) | 13:X | 23:X | 33:X | 43:X |
 | [4:V](wiki/P04.md) | 14:X | 24:X | 34:X | 
@@ -37,5 +37,5 @@ La table ci dessous permet d'avoir un aperçu rapide de l'état d'avancement. Aj
 | 6:X | 16:X | [26:V](wiki/P26.md) | 36:X | 
 | 7:X | 17:X | 27:X | 37:X | 
 | [8:V](wiki/P08.md) | 18:X | 28:X | [38:V](wiki/P38.md) | 
-| [9:V](wiki/P09.md) | 19:X | 29:X | [39:V](wiki/P39.md) | 
+| [9:O](wiki/P09.md) | 19:X | 29:X | [39:V](wiki/P39.md) | 
 | 10:X | [20:X](wiki/P20.md) | 30:X | 40:X | 
