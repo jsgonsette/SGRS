@@ -1,5 +1,6 @@
 import itertools
 import re
+import numpy as np
 
 
 length_patterns = [
@@ -129,8 +130,43 @@ def check_voyels_patterns (string, pattern):
     return found
 
 
+def num_towers (num_cubes, max_row=0, oracle=None):
+
+    if max_row == 0: max_row = num_cubes
+    if max_row == 1: return 1
+
+    # Oracle stores how many towers exists, given a total amount of cubes (x) and a maximal row length (y)
+    if oracle is None: 
+        oracle = np.zeros ([num_cubes+1, num_cubes+1], dtype=int)
+        oracle [:, 1] = 1
+
+    # How many time can we use a row with this maximum length ?
+    n = num_cubes // max_row
+
+    # Compute recursively
+    num_combi = 0
+    for i in range (0,n+1):
+        
+        # Try with oracle
+        x = num_cubes - i*max_row
+        y = max_row -1
+        num = oracle [x, y]
+        
+        # If this answer is not knwon yet, go deeper
+        if num == 0:
+            num = num_towers (x, y, oracle)
+
+        num_combi += num
+
+    # Store answer in oracle
+    oracle [num_cubes, max_row] = num_combi
+    return num_combi
+
+
+
 words = get_words ('./code/FR_Simple.txt')
 
+# Add numbers to solve last tower
 words.extend (["SEIZE", "QUINZE", "DIXSEPT", "DIXHUIT", "DIXNEUF", 
     "VINGT", "VINGTETUN", "VINGTDEUX", "VINGTROIS", "VINGTQUATRE", "VINGTCINQ", "VINGTSIX", "VINGTSEPT", "VINGTHUIT", "VINGTNEUF"
     "TRENTE", "TRENTEETUN", "TRENTEDEUX", "TRENTETROIS", "TRENTEQUATRE", "TRENTECINQ", "TRENTESIX", "TRENTESEPT", "TRENTEHUIT", "TRENTENEUF"])
@@ -154,3 +190,6 @@ for matches in match_words:
     print (matches)
 
 
+
+print ("\nNumber of different towers with 25 blocs: " + str (num_towers (25)))
+print ("Which corresponds to the discovery year of Nobelium (No)")
