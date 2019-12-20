@@ -21,21 +21,54 @@ Breaking through SGRS 2019 Challenge - [lien](https://www.mil.be/fr/communiques-
 
 
 ## Progrès
-La table ci dessous permet d'avoir un aperçu rapide de l'état d'avancement. Ajoutez les liens vers les pages wiki dès que vous avez quelques éléments de départ pour avancer.
+La table ci dessous permet d'avoir un aperçu rapide de l'état d'avancement. Des pointeurs mènent vers les pages où le détail des solutions trouvées est donné.
 
-+ X: Non résolu
-+ O: Partiellement résolu
-+ V: Résolu
+| Question | Thème | Statut | Nbr Points |
+|----------|-------|--------|------------|
+| 1                       | Texte pointillé                       |      | 1 |
+| [2 - wiki](wiki/P02.md) | Machine                               |  OK  | 3 |
+| [3 - wiki](wiki/P03.md) | Qui et qui ?                          |  2/3 | 3 |
+| [4 - wiki](wiki/P04.md) | Allumettes                            |  OK  | 2 |
+| [5 - wiki](wiki/P05.md) | Code alphanumérique                   |  OK  | 1 |
+| 6                       | Suites de lettres                     |      | 4 |
+| [7 - wiki](wiki/P07.md) | Arc-en-ciel                           |  OK  | 2 |
+| [8 - wiki](wiki/P08.md) | Mots géométriques                     |  OK  | 3 |
+| [9 - wiki](wiki/P09.md) | Suite de mots                         |      | 1 |
+| 10                      | Figure à découper                     |      | 2 |
+| 11                      | Nombres liés                          |      | 2 |
+| 12                      | Série à compléter                     |      | 1 |
+| 13                      | Graphique erroné                      |      | 2 |
+| 14                      | Recherche d'animaux                   |      | 5 |
+| 15                      | Shikaku                               |      | 3 |
+| 16                      | Mots caché                            |      | 2 |
+| 17-a                    | Qu'est-il écrit ?                     |      | 2 |
+| 17-b                    | Equation avec pays                    |      | 2 |
+| [18 - wiki](wiki/P18.md)| Horloges                              |      | 3 |
+| 19                      | Carte du monde                        |      | 3 |
+| [20 - wiki](wiki/P20.md)| Phrase codée                          |      | 4 |
+| 21                      | Tour de cubes                         |      | 2 |
+|[22a - wiki](wiki/P22.md)| Famille numérique                     |      | 1 |
+|[22b - wiki](wiki/P22.md)| Pierres tombales                      |      | 2 |
+|[22c - wiki](wiki/P22.md)| Mots cubiques                         |      | 4 |
+|[22d - wiki](wiki/P22.md)| Tours de cubes                        |  OK  | 3 |
+| 23                      | Roues fléchées                        |      | 3 |
+| 24                      | Grille cryptée                        |      | 3 |
+| 25                      | Bingo écossais                        |      | 4 |
+|[26 - wiki](wiki/P26.md) | Un, twee, trois                       | OK   | 3 |
+| 27                      | France télécom                        |      | 2 |
+| 28                      | Décomposition de nombres              |      | 4 |
+| 29                      | Mots croisés codés                    |      | 2 |
+| 30                      | Triptyque freudien                    |      | 4 |
+| 31                      | Suivez le guide                       |      | 6 |
+|[32 - wiki](wiki/P32.md) | Puzzle                                |      | 3 |
+| 33                      | Mots cachés codés                     |      | 3 |
+| 34                      | Diamant                               |      | 4 |
+| 35                      | Ruche                                 |      | 2 |
+| 36                      | Roulette                              |      | 1 |
+| 37                      | Spirale                               |      | 2 |
+|[38 - wiki](wiki/P38.md) | Automate cellulaire                   |  OK  | 3 |
+|[39 - wiki](wiki/P39.md) | Raiponce et ses tresses               |  OK  | 4 |
+| 40                      | Arbres numériques                     |      | 4 |
+|[41 - wiki](wiki/P41.md) | Image éclatée                         |  OK  | 2 |
+| 42                      | Question cachée                       |      | 3 |
 
-| 1-10 | 11-20 | 21-30 | 31-40 | 41-43 |
-|  --- | --- | ---   | ---   | ---   |
-| 1:X | 11:X | 21:X | 31:X | [41:V](wiki/P41.md) |
-| [2:V](wiki/P02.md) | 12:X | [22:O](wiki/P22.md) | [32:O](wiki/P32.md) | 42:X |
-| [3:O](wiki/P03.md) | 13:X | 23:X | 33:X | 43:X |
-| [4:V](wiki/P04.md) | 14:X | 24:X | 34:X | 
-| [5:V](wiki/P05.md) | 15:X | 25:X | 35:X | 
-| 6:X | 16:X | [26:V](wiki/P26.md) | 36:X | 
-| [7:V](wiki/P07.md) | 17:X | 27:X | 37:X | 
-| [8:V](wiki/P08.md) | [18:X](wiki/P18.md) | 28:X | [38:V](wiki/P38.md) | 
-| [9:O](wiki/P09.md) | 19:X | 29:X | [39:V](wiki/P39.md) | 
-| 10:X | [20:X](wiki/P20.md) | 30:X | 40:X | 
