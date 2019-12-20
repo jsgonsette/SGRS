@@ -130,6 +130,11 @@ def check_voyels_patterns (string, pattern):
 
 
 words = get_words ('./code/FR_Simple.txt')
+
+words.extend (["SEIZE", "QUINZE", "DIXSEPT", "DIXHUIT", "DIXNEUF", 
+    "VINGT", "VINGTETUN", "VINGTDEUX", "VINGTROIS", "VINGTQUATRE", "VINGTCINQ", "VINGTSIX", "VINGTSEPT", "VINGTHUIT", "VINGTNEUF"
+    "TRENTE", "TRENTEETUN", "TRENTEDEUX", "TRENTETROIS", "TRENTEQUATRE", "TRENTECINQ", "TRENTESIX", "TRENTESEPT", "TRENTEHUIT", "TRENTENEUF"])
+
 print ("Found {} words in dictionary".format (len (words)))
 
 match_words = []
@@ -147,4 +152,5 @@ for w in words :
 print ("List of possible words at each tower position:")
 for matches in match_words:
     print (matches)
+
 
