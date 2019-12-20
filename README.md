@@ -36,6 +36,6 @@ La table ci dessous permet d'avoir un aperçu rapide de l'état d'avancement. Aj
 | [5:V](wiki/P05.md) | 15:X | 25:X | 35:X | 
 | 6:X | 16:X | [26:V](wiki/P26.md) | 36:X | 
 | [7:V](wiki/P07.md) | 17:X | 27:X | 37:X | 
-| [8:V](wiki/P08.md) | 18:X | 28:X | [38:V](wiki/P38.md) | 
+| [8:V](wiki/P08.md) | [18:X](wiki/18.md) | 28:X | [38:V](wiki/P38.md) | 
 | [9:O](wiki/P09.md) | 19:X | 29:X | [39:V](wiki/P39.md) | 
 | 10:X | [20:X](wiki/P20.md) | 30:X | 40:X | 
