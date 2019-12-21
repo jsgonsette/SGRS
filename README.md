@@ -61,7 +61,7 @@ La table ci dessous permet d'avoir un aperçu rapide de l'état d'avancement. De
 | 25                      | Bingo écossais                        |      | 4 |                      |
 |[26 - wiki](wiki/P26.md) | Un, twee, trois                       | OK   | 3 | [lien](code/P26.py)  |
 | 27                      | France télécom                        |      | 2 |                      |
-| 28                      | Décomposition de nombres              |      | 4 |                      |
+|[28 - wiki](wiki/P28.md) | Décomposition de nombres              | 2/4  | 4 | [lien](code/P28.py)  |
 | 29                      | Mots croisés codés                    |      | 2 |                      |
 | 30                      | Triptyque freudien                    |      | 4 |                      |
 | 31                      | Suivez le guide                       |      | 6 |                      |
