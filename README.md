@@ -1,6 +1,11 @@
 # SGRS 2019
 Breaking through SGRS 2019 Challenge - [lien](https://www.mil.be/fr/communiques-presse/les-enigmes-du-sgrs-sont-de-retour)
 
+* [Questionnaire 2019 (français)](./doc/SGRS%202019.pdf)
+* [Questionnaire 2019 (néerlandais)](./doc/SGRS%202019%20-%20NL.pdf)
+* [Questionnaire 2018](./doc/SGRS%202018.pdf)
+* [Questionnaire 2018 - solutions](./doc/SGRS%202018%20-%20Soluce.pdf)
+
 ## Ressources utiles
 
 1. Number theory: [Crazy numbers](https://www.crazy-numbers.com/)
@@ -45,8 +50,8 @@ La table ci dessous permet d'avoir un aperçu rapide de l'état d'avancement. De
 | 17-b                    | Equation avec pays                    |      | 2 |
 | [18 - wiki](wiki/P18.md)| Horloges                              |      | 3 |
 | 19                      | Carte du monde                        |      | 3 |
-| [20 - wiki](wiki/P20.md)| Phrase codée                          |      | 4 |
-| 21                      | Tour de cubes                         |      | 2 |
+| [20 - wiki](wiki/P20.md)| Phrase codée                          | OK   | 4 |
+| 21                      | Pyramides de cubes                    |      | 2 |
 |[22a - wiki](wiki/P22.md)| Famille numérique                     |      | 1 |
 |[22b - wiki](wiki/P22.md)| Pierres tombales                      |      | 2 |
 |[22c - wiki](wiki/P22.md)| Mots cubiques                         |      | 4 |
@@ -71,4 +76,4 @@ La table ci dessous permet d'avoir un aperçu rapide de l'état d'avancement. De
 | 40                      | Arbres numériques                     |      | 4 |
 |[41 - wiki](wiki/P41.md) | Image éclatée                         |  OK  | 2 |
 | 42                      | Question cachée                       |      | 3 |
-
+|[43 - wiki](wiki/P43.md) | 150 ans du tableau de Mendeleïev      |      |25 |
