@@ -32,7 +32,7 @@ La table ci dessous permet d'avoir un aperçu rapide de l'état d'avancement. De
 |----------|-------|--------|------------| ----------------------- |
 | 1                       | Texte pointillé                       |      | 1 |                      |
 | [2 - wiki](wiki/P02.md) | Machine                               |  OK  | 3 | [lien](code/P02_eke.py)  |
-| [3 - wiki](wiki/P03.md) | Qui et qui ?                          |  2/3 | 3 |                      |
+| [3 - wiki](wiki/P03.md) | Qui et qui ?                          |  OK  | 3 |                      |
 | [4 - wiki](wiki/P04.md) | Allumettes                            |  OK  | 2 | [lien](code/P04.py)  |
 | [5 - wiki](wiki/P05.md) | Code alphanumérique                   |  OK  | 1 | [lien](code/P05.py)  |
 | 6                       | Suites de lettres                     |      | 4 |                      |
