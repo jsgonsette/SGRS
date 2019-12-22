@@ -43,7 +43,7 @@ La table ci dessous permet d'avoir un aperçu rapide de l'état d'avancement. De
 | 11                      | Nombres liés                          |      | 2 |                      |
 | 12                      | Série à compléter                     |      | 1 |                      |
 | 13                      | Graphique erroné                      |      | 2 |                      |
-| 14                      | Recherche d'animaux                   |      | 5 |                      |
+| 14                      | Recherche d'animaux                   | idée | 5 |                      |
 | 15                      | Shikaku                               |      | 3 |                      |
 | 16                      | Mots caché                            |      | 2 |                      |
 | 17-a                    | Qu'est-il écrit ?                     |      | 2 |                      |
