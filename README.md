@@ -57,7 +57,7 @@ La table ci dessous permet d'avoir un aperçu rapide de l'état d'avancement. De
 |[22c - wiki](wiki/P22C.md)| Mots cubiques                         |      | 4 |                      |
 |[22d - wiki](wiki/P22D.md)| Tours de cubes                        |  OK  | 3 | [lien](code/P22d.py) |
 | 23                      | Roues fléchées                        |      | 3 |                      |
-| 24                      | Grille cryptée                        |      | 3 |                      |
+|[24 - wiki](wiki/P24.md) | Grille cryptée                        | ! ! !| 3 |                      |
 | 25                      | Bingo écossais                        |      | 4 |                      |
 |[26 - wiki](wiki/P26.md) | Un, twee, trois                       | OK   | 3 | [lien](code/P26.py)  |
 | 27                      | France télécom                        |      | 2 |                      |
