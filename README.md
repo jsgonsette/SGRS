@@ -54,7 +54,7 @@ La table ci dessous permet d'avoir un aperçu rapide de l'état d'avancement. De
 | 21                      | Pyramides de cubes                    |      | 2 |                      |
 |[22a - wiki](wiki/P22A.md)| Famille numérique                    |      | 1 |                      |
 |[22b - wiki](wiki/P22B.md)| Pierres tombales                     |      | 2 |                      |
-|[22c - wiki](wiki/P22C.md)| Mots cubiques                        |  OK  | 4 |                      |
+|[22c - wiki](wiki/P22C.md)| Mots cubiques                        |  OK  | 4 | [lien](code/P22c.py) |
 |[22d - wiki](wiki/P22D.md)| Tours de cubes                       |  OK  | 3 | [lien](code/P22d.py) |
 | 23                      | Roues fléchées                        |      | 3 |                      |
 |[24 - wiki](wiki/P24.md) | Grille cryptée                        | HELP!| 3 |                      |
@@ -64,7 +64,7 @@ La table ci dessous permet d'avoir un aperçu rapide de l'état d'avancement. De
 |[28 - wiki](wiki/P28.md) | Décomposition de nombres              | 2/4  | 4 | [lien](code/P28.py)  |
 | 29                      | Mots croisés codés                    |      | 2 |                      |
 | 30                      | Triptyque freudien                    |      | 4 |                      |
-| 31                      | Suivez le guide                       |      | 6 |                      |
+|[31 - wiki](wiki/P31.md) | Suivez le guide                       |      | 6 |                      |
 |[32 - wiki](wiki/P32.md) | Puzzle                                |      | 3 |                      |
 | 33                      | Mots cachés codés                     |      | 3 |                      |
 | 34                      | Diamant                               |      | 4 |                      |
