@@ -40,7 +40,7 @@ La table ci dessous permet d'avoir un aperçu rapide de l'état d'avancement. De
 | [8 - wiki](wiki/P08.md) | Mots géométriques                     |  OK  | 3 |                      |
 | [9 - wiki](wiki/P09.md) | Suite de mots                         |  OK  | 1 |                      |
 | 10                      | Figure à découper                     |      | 2 |                      |
-| 11                      | Nombres liés                          |      | 2 |                      |
+|[11 - wiki](wiki/P11.md) | Nombres liés                          | OK   | 2 |                      |
 | 12                      | Série à compléter                     |      | 1 |                      |
 | 13                      | Graphique erroné                      |      | 2 |                      |
 |[14 - wiki](wiki/P14.md) | Recherche d'animaux                   | idée | 5 |                      |
