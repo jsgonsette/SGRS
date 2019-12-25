@@ -39,7 +39,7 @@ La table ci dessous permet d'avoir un aperçu rapide de l'état d'avancement. De
 | [7 - wiki](wiki/P07.md) | Arc-en-ciel                           |  OK  | 2 |                      |
 | [8 - wiki](wiki/P08.md) | Mots géométriques                     |  OK  | 3 |                      |
 | [9 - wiki](wiki/P09.md) | Suite de mots                         |  OK  | 1 |                      |
-| 10                      | Figure à découper                     |      | 2 |                      |
+| [10 - wiki](wiki/P10.md)| Figure à découper                     | IDEE!| 2 |                      |
 |[11 - wiki](wiki/P11.md) | Nombres liés                          | OK   | 2 |                      |
 | 12                      | Série à compléter                     |      | 1 |                      |
 | 13                      | Graphique erroné                      |      | 2 |                      |
