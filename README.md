@@ -64,7 +64,7 @@ La table ci dessous permet d'avoir un aperçu rapide de l'état d'avancement. De
 |[28 - wiki](wiki/P28.md) | Décomposition de nombres              | 2/4  | 4 | [lien](code/P28.py)  |
 | 29                      | Mots croisés codés                    |      | 2 |                      |
 | 30                      | Triptyque freudien                    |      | 4 |                      |
-|[31 - wiki](wiki/P31.md) | Suivez le guide                       | 1/6  | 6 |                      |
+|[31 - wiki](wiki/P31.md) | Suivez le guide                       | 3/6  | 6 |                      |
 |[32 - wiki](wiki/P32.md) | Puzzle                                |      | 3 |                      |
 | 33                      | Mots cachés codés                     |      | 3 |                      |
 | 34                      | Diamant                               |      | 4 |                      |
