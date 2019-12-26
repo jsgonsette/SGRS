@@ -70,7 +70,7 @@ La table ci dessous permet d'avoir un aperçu rapide de l'état d'avancement. De
 | 34                      | Diamant                               |      | 4 |                      |
 | 35                      | Ruche                                 |      | 2 |                      |
 | 36                      | Roulette                              |      | 1 |                      |
-| 37                      | Spirale                               |      | 2 |                      |
+|[37 - wiki](wiki/P37.md) | Galaxy                                |IDEE! | 2 |                      |
 |[38 - wiki](wiki/P38.md) | Automate cellulaire                   |  OK  | 3 | [lien](code/P38.py)  |
 |[39 - wiki](wiki/P39.md) | Raiponce et ses tresses               |  OK  | 4 | [lien](code/P39.py)  |
 | 40                      | Arbres numériques                     |      | 4 |                      |
