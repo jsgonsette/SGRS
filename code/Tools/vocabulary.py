@@ -12,7 +12,7 @@ class Vocabulary:
     def __init__ (self, wizium_path, dico_path):
     # ============================================================================
         self.wiz = Wizium (os.path.join (os.getcwd (), wizium_path))
-        self._load_dictionary (os.path.join (os.getcwd (), dico_path))
+        if dico_path: self._load_dictionary (os.path.join (os.getcwd (), dico_path))
 
 
     # ============================================================================
@@ -35,6 +35,27 @@ class Vocabulary:
 
             possib_starts = possib_ends
 
+
+    # ============================================================================
+    def is_valid_word_start (self, pattern):
+        """Return True is the word given is the begining of any word in the dictionary"""
+    # ============================================================================
+        
+        n = len (pattern)
+        while n < 16:
+            entry = self.wiz.dic_find_entry (pattern)
+            if entry is not None: return True
+            n += 1
+            pattern = pattern + '*'
+
+        return False
+
+   # ============================================================================
+    def is_valid_word (self, word):
+        """Return True is the word is in the dictionary"""
+    # ============================================================================
+        entry = self.wiz.dic_find_entry (word)
+        return entry is not None
 
 
     # ============================================================================
