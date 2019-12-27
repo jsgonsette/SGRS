@@ -30,7 +30,7 @@ La table ci dessous permet d'avoir un aperçu rapide de l'état d'avancement. De
 
 | Question | Thème | Statut | Nbr Points | Programme de résolution |
 |----------|-------|--------|------------| ----------------------- |
-| 1                       | Texte pointillé                       |      | 1 |                      |
+| [1 - wiki](wiki/P01.md) | Texte pointillé                       | idée à programmer| 1 |                      |
 | [2 - wiki](wiki/P02.md) | Machine                               |  OK  | 3 | [lien](code/P02_eke.py)  |
 | [3 - wiki](wiki/P03.md) | Qui et qui ?                          |  OK  | 3 |                      |
 | [4 - wiki](wiki/P04.md) | Allumettes                            |  OK  | 2 | [lien](code/P04.py)  |
@@ -75,5 +75,5 @@ La table ci dessous permet d'avoir un aperçu rapide de l'état d'avancement. De
 |[39 - wiki](wiki/P39.md) | Raiponce et ses tresses               |  OK  | 4 | [lien](code/P39.py)  |
 | 40                      | Arbres numériques                     |      | 4 |                      |
 |[41 - wiki](wiki/P41.md) | Image éclatée                         |  OK  | 2 | [lien](code/P41.py)  |
-| 42                      | Question cachée                       |      | 3 |                      |
+|[42 - wiki](wiki/P42.md) | Question cachée                       |  OK  | 3 |                      |
 |[43 - wiki](wiki/P43.md) | 150 ans du tableau de Mendeleïev      |      |25 |                      |
