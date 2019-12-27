@@ -43,7 +43,7 @@ pieces = {
 }
 
 # Grid size, can be changed to solve smaller grids
-SIZE = 6
+SIZE = 5
 
 # Keep track of pieces in use during processing
 usage = [False] * len (pieces)

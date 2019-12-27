@@ -1,4 +1,5 @@
 from Tools.vocabulary import Vocabulary
+from Tools.mendeliev import build_mendeleiev_list
 
 # nomenclature:
 # a = corner front right up
@@ -10,6 +11,23 @@ from Tools.vocabulary import Vocabulary
 # y = corner rear  left  down
 # z = corner front left  down
 # cube = (value on face left, right, bottom, up, front, rear)
+
+CUBE_EXEMPLE = [
+    (64, 46, 57, 53, 62, 48), 
+    (46, 31, 51, 26, 24, 53), 
+]
+
+CUBE_LIST = [
+    (69, 77, 80, 66, 70, 76), 
+    (77, 45, 52, 70, 54, 68),
+    (45, 37, 36, 46, 45, 37),
+    (78, 62, 78, 62, 61, 79), 
+    (62, 43, 58, 47, 40, 65),
+    (49, 37, 44, 42, 46, 40), 
+    (37, 34, 39, 32, 47, 24),
+    (48, 31, 20, 59, 26, 53),
+    (48, 56, 69, 35, 53, 51)
+    ]
 
 
 def encode (string):
@@ -34,7 +52,7 @@ def encode (string):
             center = up+bottom
             pside = w+x+y+z
 
-            cube = (pside, side, bottom, up, front, rear, center)
+            cube = (pside, side, bottom, up, front, rear)
             cubes.append (cube)
 
         w, x, y, z = a, b, c, d
@@ -84,7 +102,7 @@ def iter_cube (cube):
     """Iterate on all the possible corner values of a cube, given the
     number on each face"""
 
-    (left, right, bottom, up, front, rear, center) = cube
+    (left, right, bottom, up, front, rear) = cube
 
     for (a, b, c, d) in iter_face (right):
         for (b, a, w, x) in iter_face (up, b, a):
@@ -99,7 +117,7 @@ def iter_cube (cube):
 def iter_next_cube (cube, w, x, y, z):
     """Iterate on all the possible corner values of a cube, given the
     number on each face, along with the corner value of a connected face"""
-    (left, right, bottom, up, front, rear, center) = cube
+    (left, right, bottom, up, front, rear) = cube
 
     for (w, x, b, a) in iter_face (up, w, x):
         for (b, x, y, c) in iter_face (rear, b, x, y):
@@ -126,9 +144,6 @@ def decode_cubes (cubes, voc, start_msg='', last=False):
                 chr (ord('A') + a-1) + chr (ord('A') + b-1) + \
                 chr (ord('A') + c-1) + chr (ord('A') + d-1) 
         if not voc.is_valid_start (messages [0], can_extend=not last): continue
-
-        if messages [0] == 'CRISTALD':
-            print (messages [0])
 
         if len (cubes) == 1: 
             print (messages [0])      
@@ -160,6 +175,20 @@ def decode_cubes (cubes, voc, start_msg='', last=False):
                 level -= 1
 
                 
+def check_mendeleiev ():
+    words, dico_reverse = build_mendeleiev_list ()    
+    search_cubes = list (CUBE_LIST)
+    search_cubes.extend (CUBE_EXEMPLE)
+
+    for word in words:
+        
+        if len (word) < 8 or len (word) % 4: continue
+        encoded_cubes = encode (word)
+
+        for cube in search_cubes:
+            if cube == encoded_cubes [0]:
+                print ("Find match")
+                print (cubes)
 
 
 # Check the exemple
@@ -174,6 +203,8 @@ cubes = encode ("LATOMIUM")
 for c in cubes:
     print (c)
 
+check_mendeleiev ()
+
 
 # Load helper for french sentence identification
 WIZ_PATH = './code/Tools/libWizium.dll'
@@ -185,17 +216,17 @@ voc = Vocabulary (WIZ_PATH, DICO_PATH)
 
 # Try to decode first 3 cubes
 if True:
-    cubes = [(69, 77, 80, 66, 70, 76, 0), 
-            (77, 45, 52, 70, 54, 68, 0),
-            (45, 37, 36, 46, 45, 37, 0),
+    cubes = [(69, 77, 80, 66, 70, 76), 
+            (77, 45, 52, 70, 54, 68),
+            (45, 37, 36, 46, 45, 37),
             ]
 
     decode_cubes (cubes, voc)
 
 # Try to decode next 2 cubes
 if False:
-    cubes = [(78, 62, 78, 62, 61, 79, 0), 
-            (62, 43, 58, 47, 40, 65, 0),
+    cubes = [(78, 62, 78, 62, 61, 79), 
+            (62, 43, 58, 47, 40, 65),
             ]
 
     decode_cubes (cubes, voc)
@@ -203,21 +234,21 @@ if False:
 
 # Try to decode next 2 cubes
 if False:
-    cubes = [(49, 37, 44, 42, 46, 40, 0), 
-            (37, 34, 39, 32, 47, 24, 0),
+    cubes = [(49, 37, 44, 42, 46, 40), 
+            (37, 34, 39, 32, 47, 24),
             ]
 
     decode_cubes (cubes, voc)
 
 if False:
-    cubes = [(48, 31, 20, 59, 26, 53, 0), 
+    cubes = [(48, 31, 20, 59, 26, 53), 
             ]
 
     decode_cubes (cubes, voc)
 
 if False:
     # This one cannot be found by this program, but the solution is "L'ATOMIUM"
-    cubes = [(48, 56, 69, 35, 53, 51, 0), 
+    cubes = [(48, 56, 69, 35, 53, 51), 
             ]
 
     decode_cubes (cubes, voc, last=True)

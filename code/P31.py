@@ -1,5 +1,5 @@
 from Tools.vocabulary import Vocabulary
-from Tools.mendeliev import mendeleiv_fr, mendeleiv_en
+from Tools.mendeliev import build_mendeleiev_list
 import numpy as np
 import re
 
@@ -155,15 +155,20 @@ def make_proposals (voc, grid, grid_dir):
 def check_mendeliev ():
     """Call this function to check if any Mendeleiv element fit any grid"""
     voc = Vocabulary ('./code/Tools/libWizium.dll', None)
-    voc.wiz.dic_add_entries (mendeleiv_fr)
-    voc.wiz.dic_add_entries (mendeleiv_en)
+
+    mendel_list, dico_reverse = build_mendeleiev_list ()
+    voc.wiz.dic_add_entries (mendel_list)
 
     make_proposals (voc, grid_A, grid_dir_A)
     make_proposals (voc, grid_B, grid_dir_B)
     make_proposals (voc, grid_C, grid_dir_C)
 
+    print (dico_reverse ['TPEJVN'])
+    print (dico_reverse ['RISR'])
 
 
+check_mendeliev ()
+exit ()
 
 # Load dictionary
 WIZ_PATH = './code/Tools/libWizium.dll'
@@ -171,4 +176,4 @@ DICO_PATH = './code/Fr_Simple.txt'
 voc = Vocabulary (WIZ_PATH, DICO_PATH)
 
 # Generate propositions
-make_proposals (voc, grid_A, grid_dir_A)
+make_proposals (voc, grid_B, grid_dir_B)

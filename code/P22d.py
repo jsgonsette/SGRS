@@ -1,6 +1,7 @@
 import itertools
 import re
 import numpy as np
+from Tools.mendeliev import build_mendeleiev_list
 
 
 length_patterns = [
@@ -164,32 +165,43 @@ def num_towers (num_cubes, max_row=0, oracle=None):
 
 
 
-words = get_words ('./code/FR_Simple.txt')
+def check_towers (words):
+    match_words = []
+    for i in range (len (length_patterns)): match_words.append ([])
 
-# Add numbers to solve last tower
+    for w in words :
+        pattern_idx = get_pattern_index (w)
+        if pattern_idx >= 0:
+
+            if pattern_idx == 14: print ("[{:02d}]".format (pattern_idx) + " - partial match for " + w )
+            result = check_voyels_patterns (w, voyels_patterns [pattern_idx])
+            if result: 
+                match_words [pattern_idx].append (w)
+
+    print ("List of possible words at each tower position:")
+    for matches in match_words:
+        print (matches)
+
+
+def check_mendeleiev ():
+
+    words, dico_reverse = build_mendeleiev_list ()
+    check_towers (words)
+    exit ()
+
+
+
+# check_mendeleiev ()
+
+# Add dictionary, and numbers to solve last tower
+words = get_words ('./code/FR_Simple.txt')
 words.extend (["SEIZE", "QUINZE", "DIXSEPT", "DIXHUIT", "DIXNEUF", 
     "VINGT", "VINGTETUN", "VINGTDEUX", "VINGTROIS", "VINGTQUATRE", "VINGTCINQ", "VINGTSIX", "VINGTSEPT", "VINGTHUIT", "VINGTNEUF"
     "TRENTE", "TRENTEETUN", "TRENTEDEUX", "TRENTETROIS", "TRENTEQUATRE", "TRENTECINQ", "TRENTESIX", "TRENTESEPT", "TRENTEHUIT", "TRENTENEUF"])
 
 print ("Found {} words in dictionary".format (len (words)))
 
-match_words = []
-for i in range (len (length_patterns)): match_words.append ([])
-
-for w in words :
-    pattern_idx = get_pattern_index (w)
-    if pattern_idx >= 0:
-
-        if pattern_idx == 14: print ("[{:02d}]".format (pattern_idx) + " - partial match for " + w )
-        result = check_voyels_patterns (w, voyels_patterns [pattern_idx])
-        if result: 
-            match_words [pattern_idx].append (w)
-
-print ("List of possible words at each tower position:")
-for matches in match_words:
-    print (matches)
-
-
+check_towers (words)
 
 print ("\nNumber of different towers with 25 blocs: " + str (num_towers (25)))
 print ("Which corresponds to the discovery year of Nobelium (No)")
