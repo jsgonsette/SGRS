@@ -30,7 +30,7 @@ La table ci dessous permet d'avoir un aperçu rapide de l'état d'avancement. De
 
 | Question | Thème | Statut | Nbr Points | Programme de résolution |
 |----------|-------|--------|------------| ----------------------- |
-| [1 - wiki](wiki/P01.md) | Texte pointillé                       | idée à programmer| 1 |                      |
+| [1 - wiki](wiki/P01.md) | Texte pointillé                       |  OK  | 1 |                      |
 | [2 - wiki](wiki/P02.md) | Machine                               |  OK  | 3 | [lien](code/P02_eke.py)  |
 | [3 - wiki](wiki/P03.md) | Qui et qui ?                          |  OK  | 3 |                      |
 | [4 - wiki](wiki/P04.md) | Allumettes                            |  OK  | 2 | [lien](code/P04.py)  |
