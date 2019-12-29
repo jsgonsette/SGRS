@@ -68,7 +68,7 @@ La table ci dessous permet d'avoir un aperçu rapide de l'état d'avancement. De
 |[32 - wiki](wiki/P32.md) | Puzzle                                |      | 3 |                      |
 | 33                      | Mots cachés codés                     |      | 3 |                      |
 |[34 - wiki](wiki/P34.md) | Diamant                               |Ca coince| 4 |                      |
-| 35                      | Ruche                                 |      | 2 |                      |
+|[35 - wiki](wiki/P35.md) | Ruche                                 |      | 2 |                      |
 | 36                      | Roulette                              |      | 1 |                      |
 |[37 - wiki](wiki/P37.md) | Galaxy                                |IDEE! | 2 |                      |
 |[38 - wiki](wiki/P38.md) | Automate cellulaire                   |  OK  | 3 | [lien](code/P38.py)  |
