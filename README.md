@@ -60,7 +60,7 @@ La table ci dessous permet d'avoir un aperçu rapide de l'état d'avancement. De
 |[24 - wiki](wiki/P24.md) | Grille cryptée                        | HELP!| 3 |                      |
 |[25 - wiki](wiki/P25.md) | Bingo écossais                        |A Valider| 4 |                      |
 |[26 - wiki](wiki/P26.md) | Un, twee, trois                       | OK   | 3 | [lien](code/P26.py)  |
-|[27 - wiki](wiki/P27.md) | France télécom                        |Décrypté| 2 |                      |
+|[27 - wiki](wiki/P27.md) | France télécom                        |Décrypté mais réponse inconnue| 2 |                      |
 |[28 - wiki](wiki/P28.md) | Décomposition de nombres              | 2/4  | 4 | [lien](code/P28.py)  |
 | 29                      | Mots croisés codés                    |      | 2 |                      |
 | 30                      | Triptyque freudien                    |      | 4 |                      |
