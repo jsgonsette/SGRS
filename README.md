@@ -65,7 +65,7 @@ La table ci dessous permet d'avoir un aperçu rapide de l'état d'avancement. De
 | 29                      | Mots croisés codés                    |      | 2 |                      |
 |[30 - wiki](wiki/P30.md) | Triptyque freudien                    |A creuser| 4 |                      |
 |[31 - wiki](wiki/P31.md) | Suivez le guide                       | OK   | 6 |                      |
-|[32 - wiki](wiki/P32.md) | Puzzle                                | IN PROGRESS| 3 |                      |
+|[32 - wiki](wiki/P32.md) | Puzzle                                | OK   | 3 |                      |
 | 33                      | Mots cachés codés                     |      | 3 |                      |
 |[34 - wiki](wiki/P34.md) | Diamant                               |Ca coince| 4 |                      |
 |[35 - wiki](wiki/P35.md) | Ruche                                 |IDEE! | 2 |                      |
