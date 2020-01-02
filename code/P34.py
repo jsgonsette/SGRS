@@ -133,6 +133,16 @@ def predic_down (string, coeffs=None):
 
 #     return soluces, scores
 
+def print_diamond (lines, direction='up'):
+    width = len (lines [0])
+
+    if direction=='up':
+        for idx, line in enumerate (reversed (lines)):
+            print (' ' * (width-idx) + ' '.join (line) )
+    else:
+        for idx, line in enumerate (lines):
+            print (' ' * idx + ' '.join (line) )
+
 print ("Some checks on the exemple\n----------------")
 print (predic_top ("EXEMPLE"))
 print (predic_top ("EXEMPL"))
@@ -160,7 +170,7 @@ for d in down:
 
 print ("\nSolution\n----------------")
 
-print (develop_middle ("MONSLALOUVIERENAMUR", direction='up'))
-print (develop_middle ("MONSLALOUVIERENAMUR", direction='down'))
+print_diamond (develop_middle ("MONSLALOUVIERENAMUR", direction='up'), direction='up')
+print_diamond (develop_middle ("MONSLALOUVIERENAMUR", direction='down'), direction='down')
 
 exit ()
