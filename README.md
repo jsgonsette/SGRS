@@ -67,7 +67,7 @@ La table ci dessous permet d'avoir un aperçu rapide de l'état d'avancement. De
 |[31 - wiki](wiki/P31.md) | Suivez le guide                       | OK   | 6 |                      |
 |[32 - wiki](wiki/P32.md) | Puzzle                                | OK   | 3 |                      |
 | 33                      | Mots cachés codés                     |      | 3 |                      |
-|[34 - wiki](wiki/P34.md) | Diamant                               |Ca coince| 4 |                      |
+|[34 - wiki](wiki/P34.md) | Diamant                               | OK   | 4 |                      |
 |[35 - wiki](wiki/P35.md) | Ruche                                 |OK    | 2 |                      |
 | 36                      | Roulette                              |      | 1 |                      |
 |[37 - wiki](wiki/P37.md) | Galaxy                                |IDEE! | 2 |                      |
