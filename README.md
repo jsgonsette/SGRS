@@ -67,13 +67,13 @@ La table ci dessous permet d'avoir un aperçu rapide de l'état d'avancement. De
 |[31 - wiki](wiki/P31.md) | Suivez le guide                       |  OK  | 6 |                      |
 |[32 - wiki](wiki/P32.md) | Puzzle                                |  OK  | 3 |                      |
 | 33                      | Mots cachés codés                     |      | 3 |                      |
-|[34 - wiki](wiki/P34.md) | Diamant                               |  OK  | 4 |                      |
+|[34 - wiki](wiki/P34.md) | Diamant                               |  OK  | 4 | [lien](code/P34.py)  |
 |[35 - wiki](wiki/P35.md) | Ruche                                 |  OK  | 2 |                      |
 | 36                      | Roulette                              |      | 1 |                      |
 |[37 - wiki](wiki/P37.md) | Galaxy                                | IDEE | 2 |                      |
 |[38 - wiki](wiki/P38.md) | Automate cellulaire                   |  OK  | 3 | [lien](code/P38.py)  |
 |[39 - wiki](wiki/P39.md) | Raiponce et ses tresses               |  OK  | 4 | [lien](code/P39.py)  |
-|[40 - wiki](wiki/P40.md) | Arbres numériques                     | HELP | 4 |                      |
+|[40 - wiki](wiki/P40.md) | Arbres numériques                     |  OK  | 4 |                      |
 |[41 - wiki](wiki/P41.md) | Image éclatée                         |  OK  | 2 | [lien](code/P41.py)  |
 |[42 - wiki](wiki/P42.md) | Question cachée                       |  OK  | 3 |                      |
 |[43 - wiki](wiki/P43.md) | 150 ans du tableau de Mendeleïev      |      |25 |                      |
