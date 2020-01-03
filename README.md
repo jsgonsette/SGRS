@@ -39,13 +39,13 @@ La table ci dessous permet d'avoir un aperçu rapide de l'état d'avancement. De
 | [7 - wiki](wiki/P07.md) | Arc-en-ciel                           |  OK  | 2 |                      |
 | [8 - wiki](wiki/P08.md) | Mots géométriques                     |  OK  | 3 |                      |
 | [9 - wiki](wiki/P09.md) | Suite de mots                         |  OK  | 1 |                      |
-| [10 - wiki](wiki/P10.md)| Figure à découper                     | IDEE!| 2 |                      |
+| [10 - wiki](wiki/P10.md)| Figure à découper                     | HELP | 2 |                      |
 |[11 - wiki](wiki/P11.md) | Nombres liés                          | OK   | 2 |                      |
 | 12                      | Série à compléter                     |      | 1 |                      |
 | 13                      | Graphique erroné                      |      | 2 |                      |
 |[14 - wiki](wiki/P14.md) | Recherche d'animaux                   | idée | 5 |                      |
 | 15                      | Shikaku                               |      | 3 |                      |
-|[16 - wiki](wiki/P16.md) | Mots caché                            |idée  | 2 |                      |
+|[16 - wiki](wiki/P16.md) | Mots caché                            | idée | 2 |                      |
 | 17-a                    | Qu'est-il écrit ?                     |      | 2 |                      |
 | 17-b                    | Equation avec pays                    |      | 2 |                      |
 | [18 - wiki](wiki/P18.md)| Horloges                              | OK   | 3 |                      |
@@ -56,24 +56,24 @@ La table ci dessous permet d'avoir un aperçu rapide de l'état d'avancement. De
 |[22b - wiki](wiki/P22B.md)| Pierres tombales                     |A Valider| 2 |                      |
 |[22c - wiki](wiki/P22C.md)| Mots cubiques                        |  OK  | 4 | [lien](code/P22c.py) |
 |[22d - wiki](wiki/P22D.md)| Tours de cubes                       |  OK  | 3 | [lien](code/P22d.py) |
-|[23 - wiki](wiki/P23.md) | Roues fléchées                        |IDEE! | 3 |                      |
-|[24 - wiki](wiki/P24.md) | Grille cryptée                        | HELP!| 3 |                      |
+|[23 - wiki](wiki/P23.md) | Roues fléchées                        | HELP | 3 |                      |
+|[24 - wiki](wiki/P24.md) | Grille cryptée                        | HELP | 3 |                      |
 |[25 - wiki](wiki/P25.md) | Bingo écossais                        |A Valider| 4 |                      |
 |[26 - wiki](wiki/P26.md) | Un, twee, trois                       | OK   | 3 | [lien](code/P26.py)  |
 |[27 - wiki](wiki/P27.md) | France télécom                        | OK   | 2 |                      |
 |[28 - wiki](wiki/P28.md) | Décomposition de nombres              | 2/4  | 4 | [lien](code/P28.py)  |
 | 29                      | Mots croisés codés                    |      | 2 |                      |
 |[30 - wiki](wiki/P30.md) | Triptyque freudien                    |A creuser| 4 |                      |
-|[31 - wiki](wiki/P31.md) | Suivez le guide                       | OK   | 6 |                      |
-|[32 - wiki](wiki/P32.md) | Puzzle                                | OK   | 3 |                      |
+|[31 - wiki](wiki/P31.md) | Suivez le guide                       |  OK  | 6 |                      |
+|[32 - wiki](wiki/P32.md) | Puzzle                                |  OK  | 3 |                      |
 | 33                      | Mots cachés codés                     |      | 3 |                      |
-|[34 - wiki](wiki/P34.md) | Diamant                               | OK   | 4 |                      |
-|[35 - wiki](wiki/P35.md) | Ruche                                 |OK    | 2 |                      |
+|[34 - wiki](wiki/P34.md) | Diamant                               |  OK  | 4 |                      |
+|[35 - wiki](wiki/P35.md) | Ruche                                 |  OK  | 2 |                      |
 | 36                      | Roulette                              |      | 1 |                      |
-|[37 - wiki](wiki/P37.md) | Galaxy                                |IDEE! | 2 |                      |
+|[37 - wiki](wiki/P37.md) | Galaxy                                | IDEE | 2 |                      |
 |[38 - wiki](wiki/P38.md) | Automate cellulaire                   |  OK  | 3 | [lien](code/P38.py)  |
 |[39 - wiki](wiki/P39.md) | Raiponce et ses tresses               |  OK  | 4 | [lien](code/P39.py)  |
-| 40                      | Arbres numériques                     |      | 4 |                      |
+|[40 - wiki](wiki/P40.md) | Arbres numériques                     | HELP | 4 |                      |
 |[41 - wiki](wiki/P41.md) | Image éclatée                         |  OK  | 2 | [lien](code/P41.py)  |
 |[42 - wiki](wiki/P42.md) | Question cachée                       |  OK  | 3 |                      |
 |[43 - wiki](wiki/P43.md) | 150 ans du tableau de Mendeleïev      |      |25 |                      |
