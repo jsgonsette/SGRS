@@ -58,7 +58,7 @@ La table ci dessous permet d'avoir un aperçu rapide de l'état d'avancement. De
 |[22d - wiki](wiki/P22D.md)| Tours de cubes                       |  OK  | 3 | [lien](code/P22d.py) |
 |[23 - wiki](wiki/P23.md) | Roues fléchées                        |OK 99%| 3 |                      |
 |[24 - wiki](wiki/P24.md) | Grille cryptée                        | HELP | 3 |                      |
-|[25 - wiki](wiki/P25.md) | Bingo écossais                        |A Valider| 4 |                      |
+|[25 - wiki](wiki/P25.md) | Bingo écossais                        |OK    | 4 |                      |
 |[26 - wiki](wiki/P26.md) | Un, twee, trois                       | OK   | 3 | [lien](code/P26.py)  |
 |[27 - wiki](wiki/P27.md) | France télécom                        | OK   | 2 |                      |
 |[28 - wiki](wiki/P28.md) | Décomposition de nombres              | 2/4  | 4 | [lien](code/P28.py)  |
