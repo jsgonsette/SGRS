@@ -57,14 +57,14 @@ La table ci dessous permet d'avoir un aperçu rapide de l'état d'avancement. De
 |[22c - wiki](wiki/P22C.md)| Mots cubiques                        |  OK  | 4 | [lien](code/P22c.py) |
 |[22d - wiki](wiki/P22D.md)| Tours de cubes                       |  OK  | 3 | [lien](code/P22d.py) |
 |[23 - wiki](wiki/P23.md) | Roues fléchées                        |  OK  | 3 |                      |
-|[24 - wiki](wiki/P24.md) | Grille cryptée                        | HELP | 3 |                      |
-|[25 - wiki](wiki/P25.md) | Bingo écossais                        |OK    | 4 |                      |
-|[26 - wiki](wiki/P26.md) | Un, twee, trois                       | OK   | 3 | [lien](code/P26.py)  |
-|[27 - wiki](wiki/P27.md) | France télécom                        | OK   | 2 |                      |
-|[28 - wiki](wiki/P28.md) | Décomposition de nombres              | OK   | 4 | [lien](code/P28.py)  |
+|[24 - wiki](wiki/P24.md) | Grille cryptée                        |  OK  | 3 |[lien](code/P24-Decode.py)|
+|[25 - wiki](wiki/P25.md) | Bingo écossais                        |  OK  | 4 |                      |
+|[26 - wiki](wiki/P26.md) | Un, twee, trois                       |  OK  | 3 | [lien](code/P26.py)  |
+|[27 - wiki](wiki/P27.md) | France télécom                        |  OK  | 2 |                      |
+|[28 - wiki](wiki/P28.md) | Décomposition de nombres              |  OK  | 4 | [lien](code/P28.py)  |
 | 29                      | Mots croisés codés                    |      | 2 |                      |
-|[30 - wiki](wiki/P30.md) | Triptyque freudien                    |A creuser| 4 |                      |
-|[31 - wiki](wiki/P31.md) | Suivez le guide                       |  OK  | 6 |                      |
+|[30 - wiki](wiki/P30.md) | Triptyque freudien                    |A creuser| 4 |                   |
+|[31 - wiki](wiki/P31.md) | Suivez le guide                       |  OK  | 6 |[lien](code/P31.py)   |
 |[32 - wiki](wiki/P32.md) | Puzzle                                |  OK  | 3 |                      |
 | 33                      | Mots cachés codés                     |      | 3 |                      |
 |[34 - wiki](wiki/P34.md) | Diamant                               |  OK  | 4 | [lien](code/P34.py)  |
