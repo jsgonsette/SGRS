@@ -17,23 +17,30 @@ class Vocabulary:
 
     # ============================================================================
     def is_valid_start (self, sentence, can_extend=True):
-        """Return true if the begining of a sentence make sense, that is, if it
-        is made up of several known words. The last word may be incomplete"""        
+        """Return if the begining of a sentence make sense, that is, if it
+        is made up of several known words. The last word may be incomplete.
+        
+        return  Minimum number of words in this sentence. 0 if not a valid sentence.
+        """        
     # ============================================================================
 
-        possib_starts = [0]
-        extention_length = 0
+        slices_list = [[0]]
+        progress = 0
 
         while True:
-            possib_ends = self._find_possibile_end_pos (sentence, possib_starts, can_extend)
+            slices_list = self._extend_slices (sentence, slices_list, can_extend)
+            if len (slices_list) == 0: return False
+            new_progress = max ([slices [-1] for slices in slices_list])
 
-            if any ([len (sentence) <= p for p in possib_ends]) : 
-                return True
+            if len (sentence) <= new_progress :
+                for slices in slices_list:
+                    if slices [-1] == new_progress: 
+                        return len (slices) -1
 
-            if not len (possib_ends):
-                return False
+            if new_progress <= progress:
+                return 0
 
-            possib_starts = possib_ends
+            progress = new_progress
 
 
     # ============================================================================
@@ -58,14 +65,17 @@ class Vocabulary:
         return entry is not None
 
 
-    # ============================================================================
-    def _find_possibile_end_pos (self, sentence, possible_start_pos, can_extend=False):
+     # ============================================================================
+    def _extend_slices (self, sentence, slices_list, can_extend=False):
     # ============================================================================
 
         max_extention = 10
-        possibilities = set ()
+        possible_start_pos = [slices [-1] for slices in slices_list]
+        new_slices_list = []
 
-        for pos_start in possible_start_pos:
+        for slices in slices_list:
+
+            pos_start = slices [-1]
             pos_end = pos_start +1
             extention = ''
            
@@ -75,14 +85,17 @@ class Vocabulary:
                 word = sentence [pos_start: pos_end] + extention
                 if pos_end - pos_start > 1:
                     entry = self.wiz.dic_find_entry (word)
-                elif word in ['A', 'C', 'J', 'N', 'S', 'M', 'T', 'L']:
-                    entry = None #word
+                elif word in ['A', 'C', 'J', 'N', 'S', 'M', 'T', 'L', 'Y']:
+                    entry = word
                 else: entry = None
 
                 # Add this valid end to our list
                 if entry is not None:
                     length = (pos_end-pos_start)
-                    if pos_end not in possible_start_pos: possibilities.add ( pos_end )
+                    if pos_end not in possible_start_pos: 
+                        new_slices = list (slices)
+                        new_slices.append (pos_end)
+                        new_slices_list.append (new_slices)
                     pos_end += 1
 
                 # Keep searching with longer words
@@ -94,8 +107,8 @@ class Vocabulary:
                 # Or give up
                 else: break
         
-        return possibilities
-
+        return new_slices_list
+        
 
 
     # ============================================================================
