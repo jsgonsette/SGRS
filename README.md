@@ -69,7 +69,7 @@ La table ci dessous permet d'avoir un aperçu rapide de l'état d'avancement. De
 | 33                       | **Mots cachés codés**                     |      | 3 |                      |
 |[34 - wiki](wiki/P34.md)  | Diamant                               |  OK  | 4 | [lien](code/P34.py)  |
 |[35 - wiki](wiki/P35.md)  | Ruche                                 |  OK  | 2 |                      |
-| 36                       | **Roulette**                              |      | 1 |                      |
+|[36 - wiki](wiki/P36.md)  | Roulette                             | OK     | 1 |                      |
 |[37 - wiki](wiki/P37.md)  | **Galaxy**                                | HELP | 2 |                      |
 |[38 - wiki](wiki/P38.md)  | Automate cellulaire                   |  OK  | 3 | [lien](code/P38.py)  |
 |[39 - wiki](wiki/P39.md)  | Raiponce et ses tresses               |  OK  | 4 | [lien](code/P39.py)  |
