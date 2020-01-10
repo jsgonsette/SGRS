@@ -2,3 +2,9 @@
 
 - On pourrait dans chacune de nos reponse mettre un commentaire et dans ce commentaire mettre 1 lettre en Gras et/ou Italique pour faire reference au code Bacon.
 - En regroupant ces lettres ca formerait une question qui serait liee au nombre de Kevin Bacon, en considerant des acteurs belges :)
+- La concatenation de ces acteurs (reponse a la question), serait la clef Vigenere pour decrypter le commentaire final 
+- Pour etre sure qu ils voient qu il y a une reponse cachee, il faudrait mettre un texte dans le commentaire final en ROT Cesar 13 par example: "DHRY RFG YR PBZZRAGNVER FRPERG?"
+
+## Example de degre de Bacon
+![BaconDegree](Reponse.png)
+
