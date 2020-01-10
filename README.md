@@ -63,7 +63,7 @@ La table ci dessous permet d'avoir un aperçu rapide de l'état d'avancement. De
 |[27 - wiki](wiki/P27.md)  | France télécom                        |  OK  | 2 |                      |
 |[28 - wiki](wiki/P28.md)  | Décomposition de nombres              |  OK  | 4 | [lien](code/P28.py)  |
 | 29                       | **Mots croisés codés**                |      | 2 |                      |
-|[30 - wiki](wiki/P30.md)  | **Triptyque freudien**                |A creuser| 4 |                   |
+|[30 - wiki](wiki/P30.md)  | Triptyque **freudien**                | 2/4  | 4 |                      |
 |[31 - wiki](wiki/P31.md)  | Suivez le guide                       |  OK  | 6 |[lien](code/P31.py)   |
 |[32 - wiki](wiki/P32.md)  | Puzzle                                |  OK  | 3 |                      |
 | 33                       | **Mots cachés codés**                 |      | 3 |                      |
@@ -76,4 +76,4 @@ La table ci dessous permet d'avoir un aperçu rapide de l'état d'avancement. De
 |[40 - wiki](wiki/P40.md)  | Arbres numériques                     |  OK  | 4 |                      |
 |[41 - wiki](wiki/P41.md)  | Image éclatée                         |  OK  | 2 | [lien](code/P41.py)  |
 |[42 - wiki](wiki/P42.md)  | Question cachée                       |  OK  | 3 |                      |
-|[43 - wiki](wiki/P43.md)  | **150 ans du tableau de Mendeleïev**      |      |25 |                      |
+|[43 - wiki](wiki/P43.md)  | **150 ans du tableau de Mendeleïev**  |      |25 |                      |

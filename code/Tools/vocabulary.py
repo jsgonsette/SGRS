@@ -1,4 +1,4 @@
-import os
+import os, io
 import re
 import platform
 import random
@@ -121,7 +121,7 @@ class Vocabulary:
     # ============================================================================
 
         # Read file content
-        with open (dico_path, 'r') as f:
+        with io.open (dico_path, mode='r', encoding='utf-8') as f:
             words = f.readlines ()
 
         # Remove what is not a letter, if any
