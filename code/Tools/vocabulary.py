@@ -16,7 +16,7 @@ class Vocabulary:
 
 
     # ============================================================================
-    def is_valid_start (self, sentence, can_extend=True):
+    def is_valid_start (self, sentence, can_extend=True, max_words=-1):
         """Return if the begining of a sentence make sense, that is, if it
         is made up of several known words. The last word may be incomplete.
         
@@ -30,6 +30,7 @@ class Vocabulary:
         while True:
             slices_list = self._extend_slices (sentence, slices_list, can_extend)
             if len (slices_list) == 0: return False
+            if len (slices_list) > max_words and max_words > 0: return False
             new_progress = max ([slices [-1] for slices in slices_list])
 
             if len (sentence) <= new_progress :
@@ -124,8 +125,16 @@ class Vocabulary:
             words = f.readlines ()
 
         # Remove what is not a letter, if any
+        words = [re.sub('[éêèëÉÈÊË]+', 'E', s) for s in words]
+        words = [re.sub('[ùûÛüÜÙ]+', 'U', s) for s in words]
+        words = [re.sub('[ïîÏÎ]+', 'I', s) for s in words]
+        words = [re.sub('[äâÄÂàÀ]+', 'A', s) for s in words]
+        words = [re.sub('[ôöÔÖ]+', 'O', s) for s in words]
+        words = [re.sub('[ç]+', 'C', s) for s in words]
         words = [re.sub('[^a-zA-Z]+', '', s) for s in words]
+        words = [w.upper () for w in words]
         
+        # Add number above 20
         words.extend (["SEIZE", "QUINZE", "DIXSEPT", "DIXHUIT", "DIXNEUF", 
                     "VINGT", "VINGTETUN", "VINGTDEUX", "VINGTROIS", "VINGTQUATRE", 
                     "VINGTCINQ", "VINGTSIX", "VINGTSEPT", "VINGTHUIT", "VINGTNEUF",
@@ -136,12 +145,15 @@ class Vocabulary:
                     "CINQUANTE", "CINQUANTEETUN", "CINQUANTEDEUX", "CINQUANTETROIS", "CINQUANTEQUATRE", 
                     "CINQUANTECINQ", "CINQUANTESIX", "CINQUANTESEPT", "CINQUANTEHUIT", "CINQUANTENEUF",
                     ])
+
+        # Add some code names
+        words.extend (['CAESAR', 'VIGENERE', 'CESAR', 'BEAUFORT', 'PLAYFAIR', 'SCYTALE', 
+                    'POLYBE', 'PIGPEN', 'BELLASO', 'GRONSFELD', 'AUTOCLAVE', 'POLUX', 'COLLON', 
+                    'SLIDEFAIR', 'AFFINE', 'HILL', 'FOURSQUARE', 'WOLSELEY', 'ADFGVX'])
  
         # Load dictionary
         self.wiz.dic_clear ()
         n = self.wiz.dic_add_entries (words)
-
-
 
         print ("Number of words: ")
         print (" - in file: ", len (words))

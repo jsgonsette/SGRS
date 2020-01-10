@@ -11,6 +11,23 @@ def rotate (string, shift):
         output += chr (o)
     return output
 
+def rotate_18 (string, shift):
+    output = ""
+    for s in string.upper ():
+        o = ord (s)
+        if o >= ord ('A') and o <= ord ('Z'): o -= ord ('A')
+        elif o >= ord ('0') and o <= ord ('9'): o = o - ord ('0') + 26
+        
+        o += shift
+        if o < 0: o += 36
+        if o >= 36: o -= 36
+
+        if o < 26:
+            output += chr (o + ord ('A'))
+        else:
+            output += chr (o-26 + ord ('0'))
+    return output
+
 
 def vigenere (string, key, reverse=False):
     n = len (key)
@@ -20,9 +37,10 @@ def vigenere (string, key, reverse=False):
         shift = ord (key [idx%n]) - ord ('A') 
         if reverse: shift = -shift
 
-        o = ord (s) + shift
-        if o < ord ('A'): o += 26
-        if o > ord ('Z'): o -= 26
+        o = ord (s) - ord ('A')
+        if o >= 0 and o <= 25:
+            o = (o + shift) % 26 + ord ('A')
+        else: o = ord (s)
 
         output += chr (o)
     return output
