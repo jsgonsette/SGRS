@@ -41,4 +41,17 @@ countries=[
 	'Tuvalu','Vanuatu']
 
 
-cities = ['Aerschot', 'Alost', 'Andenne', 'Antoing', 'Anvers', 'Arlon', 'Ath', 'Aubange', 'Audenarde', 'Bastogne', 'Beaumont', 'Beauraing', 'Beringen', 'Bilzen', 'Binche', 'Blankenberghe', 'Bouillon', 'BraineleComte', 'Bree', 'Bruges', 'Bruxelles', 'Charleroi', 'Chatelet', 'Chievres', 'Chimay', 'Chiny', 'Ciney', 'CominesWarneton', 'Courtrai', 'Couvin', 'Damme', 'Deinze', 'Diest', 'DilsenStokkem', 'Dinant', 'Dixmude', 'Durbuy', 'Eeklo', 'Enghien', 'Eupen', 'Fleurus', 'Florenville', 'FontainelEveque', 'FosseslaVille', 'Furnes', 'Gand', 'Geel', 'Gembloux', 'Genappe', 'Genk', 'Gistel', 'Grammont', 'Hal', 'Halen', 'HamontAchel', 'Hannut', 'Harelbeke', 'Hasselt', 'HercklaVille', 'Herentals', 'Herstal', 'Herve', 'Hoogstraten', 'Houffalize', 'Huy', 'Izegem', 'Jodoigne', 'Landen', 'Leau', 'Le', 'Lessines', 'LeuzeenHainaut', 'Liege', 'Lierre', 'Limbourg', 'Lokeren', 'Lommel', 'Looz', 'LoReninge', 'Louvain', 'Maaseik', 'Malines', 'Malmedy', 'MarcheenFamenne', 'Menin', 'Messines', 'Mons', 'MontaiguZichem', 'Mortsel', 'Mouscron', 'Namur', 'Neufchateau', 'Nieuport', 'Ninove', 'Nivelles', 'Ostende', 'OttigniesLouvainlaNeuve', 'Oudenburg', 'Peer', 'Philippeville', 'Poperinge', 'Renaix', 'Rochefort', 'Roulers', 'SaintGhislain', 'SaintHubert', 'SaintNicolas', 'SaintTrond', 'SaintVith', 'Seraing', 'Soignies', 'Spa', 'Stavelot', 'Termonde', 'Thourout', 'Thuin', 'Tielt', 'Tirlemont', 'Tongres', 'Tournai', 'Tubize', 'Turnhout', 'Verviers', 'Vilvorde', 'Virton', 'Vise', 'Walcourt', 'Waregem', 'Waremme', 'Wavre', 'Wervicq', 'Ypres']
+cities = ['Aerschot', 'Alost', 'Andenne', 'Antoing', 'Anvers', 'Arlon', 'Ath', 'Aubange', 'Audenarde', 
+		'Bastogne', 'Beaumont', 'Beauraing', 'Beringen', 'Bilzen', 'Binche', 'Blankenberghe', 'Bouillon', 
+		'BraineleComte', 'Bree', 'Bruges', 'Bruxelles', 'Charleroi', 'Chatelet', 'Chievres', 'Chimay', 'Chiny', 
+		'Ciney', 'CominesWarneton', 'Courtrai', 'Couvin', 'Damme', 'Deinze', 'Diest', 'DilsenStokkem', 'Dinant', 
+		'Dixmude', 'Durbuy', 'Eeklo', 'Enghien', 'Eupen', 'Fleurus', 'Florenville', 'FontainelEveque', 'FosseslaVille', 
+		'Furnes', 'Gand', 'Geel', 'Gembloux', 'Genappe', 'Genk', 'Gistel', 'Grammont', 'Hal', 'Halen', 'HamontAchel', 
+		'Hannut', 'Harelbeke', 'Hasselt', 'HercklaVille', 'Herentals', 'Herstal', 'Herve', 'Hoogstraten', 'Houffalize', 
+		'Huy', 'Izegem', 'Jodoigne', 'Landen', 'Leau', 'Le', 'Lessines', 'LeuzeenHainaut', 'Liege', 'Lierre', 'Limbourg', 
+		'Lokeren', 'Lommel', 'Looz', 'LoReninge', 'Louvain', 'Maaseik', 'Malines', 'Malmedy', 'MarcheenFamenne', 'Menin', 
+		'Messines', 'Mons', 'MontaiguZichem', 'Mortsel', 'Mouscron', 'Namur', 'Neufchateau', 'Nieuport', 'Ninove', 'Nivelles', 
+		'Ostende', 'OttigniesLouvainlaNeuve', 'Oudenburg', 'Peer', 'Philippeville', 'Poperinge', 'Renaix', 'Rochefort', 
+		'Roulers', 'SaintGhislain', 'SaintHubert', 'SaintNicolas', 'SaintTrond', 'SaintVith', 'Seraing', 'Soignies', 
+		'Spa', 'Stavelot', 'Termonde', 'Thourout', 'Thuin', 'Tielt', 'Tirlemont', 'Tongres', 'Tournai', 'Tubize', 
+		'Turnhout', 'Verviers', 'Vilvorde', 'Virton', 'Vise', 'Walcourt', 'Waregem', 'Waremme', 'Wavre', 'Wervicq', 'Ypres']
