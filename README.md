@@ -35,7 +35,7 @@ La table ci dessous permet d'avoir un aperçu rapide de l'état d'avancement. De
 | [3 - wiki](wiki/P03.md)  | Qui et qui ?                          |  OK  | 3 |                      |
 | [4 - wiki](wiki/P04.md)  | Allumettes                            |  OK  | 2 | [lien](code/P04.py)  |
 | [5 - wiki](wiki/P05.md)  | Code alphanumérique                   |  OK  | 1 | [lien](code/P05.py)  |
-| [6 - wiki](wiki/P06.md)  | **Suites de lettres**                 | idée | 4 |                      |
+| [6 - wiki](wiki/P06.md)  | **Suites de lettres**                 |2idées| 4 |                      |
 | [7 - wiki](wiki/P07.md)  | Arc-en-ciel                           |  OK  | 2 |                      |
 | [8 - wiki](wiki/P08.md)  | Mots géométriques                     |  OK  | 3 |                      |
 | [9 - wiki](wiki/P09.md)  | Suite de mots                         |  OK  | 1 |                      |
