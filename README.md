@@ -45,7 +45,7 @@ La table ci dessous permet d'avoir un aperçu rapide de l'état d'avancement. De
 | 13                       | **Graphique erroné**                  |      | 2 |                      |
 |[14 - wiki](wiki/P14.md)  | **Recherche d'animaux**               | idée | 5 |                      |
 |[15 - wiki](wiki/P15.md)  | **Shikaku**                           | idée | 3 |                      |
-|[16 - wiki](wiki/P16.md)  | **Mots caché**                        | idée | 2 |                      |
+|[16 - wiki](wiki/P16.md)  | Mots caché                            | OK   | 2 |                      |
 |[17-a - wiki](wiki/P17.md)| **Qu'est-il écrit ?**                 | idée | 2 |                      |
 |[17-b - wiki](wiki/P17b.md)| Equation avec pays                   | OK   | 2 |                      |
 |[18 - wiki](wiki/P18.md)  | Horloges                              | OK   | 3 |                      |
