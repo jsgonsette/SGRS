@@ -185,13 +185,13 @@ def check_mendeliev ():
     mendel_list, dico_reverse = build_mendeleiev_list ()
     voc.wiz.dic_add_entries (mendel_list)
 
-    print ("\nSearchin grid A")
+    print ("\nSearching grid A\n---------------------")
     make_proposals (voc, grid_A, grid_dir_A)
 
-    print ("\nSearchin grid B")
+    print ("\nSearching grid B\n---------------------")
     make_proposals (voc, grid_B, grid_dir_B)
 
-    print ("\nSearchin grid C")
+    print ("\nSearching grid C\n---------------------")
     make_proposals (voc, grid_C, grid_dir_C)
 
     print (dico_reverse ['TPEJVN'])
