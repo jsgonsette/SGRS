@@ -1,3 +1,29 @@
+# MIT License
+
+# Copyright (c) [2020] [Jean-Sébastien Gonsette]
+
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+__author__ = "Jean-Sébastien Gonsette"
+__year__ = 2019
+
+
 from Tools.vocabulary import Vocabulary
 from Tools.mendeliev import build_mendeleiev_list
 
@@ -116,7 +142,7 @@ def iter_cube (cube):
 
 def iter_next_cube (cube, w, x, y, z):
     """Iterate on all the possible corner values of a cube, given the
-    number on each face, along with the corner value of a connected face"""
+    number on each face, along with the corner value of a connected face (w, x, y, z)"""
     (left, right, bottom, up, front, rear) = cube
 
     for (w, x, b, a) in iter_face (up, w, x):
@@ -129,6 +155,7 @@ def iter_next_cube (cube, w, x, y, z):
 
 
 def decode_cubes (cubes, voc, start_msg='', last=False):
+    """Find out all the valid french sentences mathcing a list of cubes"""
 
     messages = ["" for _ in range (len (cubes))]
     iterators = [None] * len (cubes)
@@ -143,7 +170,7 @@ def decode_cubes (cubes, voc, start_msg='', last=False):
                 chr (ord('A') + y-1) + chr (ord('A') + z-1) + \
                 chr (ord('A') + a-1) + chr (ord('A') + b-1) + \
                 chr (ord('A') + c-1) + chr (ord('A') + d-1) 
-        if not voc.is_valid_start (messages [0], can_extend=not last): continue
+        if not voc.is_valid_start (messages [0], can_extend=not last, max_words=3): continue
 
         if len (cubes) == 1: 
             print (messages [0])      
@@ -163,7 +190,7 @@ def decode_cubes (cubes, voc, start_msg='', last=False):
                 # Check the sequence make sense
                 messages [level] = messages [level -1] + chr (ord('A') + a-1) + chr (ord('A') + b-1) + chr (ord('A') + c-1) + chr (ord('A') + d-1) 
 
-                if not voc.is_valid_start (messages [level]): continue
+                if not voc.is_valid_start (messages [level], max_words=3+level): continue
                 print (messages [level])            
                 
                 # Continue on next cube if possble
@@ -176,6 +203,7 @@ def decode_cubes (cubes, voc, start_msg='', last=False):
 
                 
 def check_mendeleiev ():
+    """Try to match Mendeleiev elements with the given cubes"""
     words, dico_reverse = build_mendeleiev_list ()    
     search_cubes = list (CUBE_LIST)
     search_cubes.extend (CUBE_EXEMPLE)
@@ -191,31 +219,32 @@ def check_mendeleiev ():
                 print (cubes)
 
 
+# Load helper for french sentence identification
+WIZ_PATH = './code/Tools/libWizium.dll'
+DICO_PATH = './code/Fr_Simple.txt'
+voc = Vocabulary (WIZ_PATH, DICO_PATH)
+
+
 # Check the exemple
-print ("Checking example")
-cubes = encode ("UNEXEMPLECUBIQUE")
+msg = "UNEXEMPLECUBIQUE"
+print ("\nChecking example on: [{}]".format (msg))
+cubes = encode (msg)
 for c in cubes:
     print (c)
 
 # Check last cube
-print ("LATOMIUM --> ")
+print ("\nChecking on [LATOMIUM] --> ")
 cubes = encode ("LATOMIUM")
 for c in cubes:
     print (c)
 
+# Check Mendeleiev
+print ("\nChecking Mendeleiev table")
 check_mendeleiev ()
-
-
-# Load helper for french sentence identification
-WIZ_PATH = './code/Tools/libWizium.dll'
-DICO_PATH = './code/Fr_Simple.txt'
-DICO_PATH = './code/ODS4.txt'
-voc = Vocabulary (WIZ_PATH, DICO_PATH)
-
-
 
 # Try to decode first 3 cubes
 if True:
+    print ("\nChecking 'valid' sentences on first 3 cubes")
     cubes = [(69, 77, 80, 66, 70, 76), 
             (77, 45, 52, 70, 54, 68),
             (45, 37, 36, 46, 45, 37),
@@ -224,7 +253,8 @@ if True:
     decode_cubes (cubes, voc)
 
 # Try to decode next 2 cubes
-if False:
+if True:
+    print ("\nChecking 'valid' sentences on first line 2 cubes")
     cubes = [(78, 62, 78, 62, 61, 79), 
             (62, 43, 58, 47, 40, 65),
             ]
@@ -233,14 +263,16 @@ if False:
 
 
 # Try to decode next 2 cubes
-if False:
+if True:
+    print ("\nChecking 'valid' sentences on second line 2 cubes")
     cubes = [(49, 37, 44, 42, 46, 40), 
             (37, 34, 39, 32, 47, 24),
             ]
 
     decode_cubes (cubes, voc)
 
-if False:
+if True:
+    print ("\nChecking 'valid' sentences on second line single cube")
     cubes = [(48, 31, 20, 59, 26, 53), 
             ]
 
@@ -248,6 +280,7 @@ if False:
 
 if False:
     # This one cannot be found by this program, but the solution is "L'ATOMIUM"
+    print ("\nChecking 'valid' sentences on second last 2 cubes")
     cubes = [(48, 56, 69, 35, 53, 51), 
             ]
 

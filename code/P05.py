@@ -1,3 +1,27 @@
+# MIT License
+
+# Copyright (c) [2020] [Jean-Sébastien Gonsette]
+
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+__author__ = "Jean-Sébastien Gonsette"
+__year__ = 2019
 
 import numpy as np 
 
@@ -40,6 +64,7 @@ digits = {
     '3': [1,2,3,4,5,6,9,12],
 }
 
+# Representation of the coded string
 coded = [
     '01-02-03-04-07-08-09-10-11-12',
     '',
@@ -74,6 +99,8 @@ coded = [
 ]
 
 def flip_horizontal (digit):
+    """Flip a digit horizontaly"""
+
     in_ons = [False] + [i in digit for i in range (1,17)]
     out_ons = list (in_ons)
 
@@ -103,6 +130,7 @@ def flip_horizontal (digit):
 
 
 def flip_vertical (digit):
+    """Flip a digit vertically"""
     in_ons = [False] + [i in digit for i in range (1,17)]
     out_ons = list (in_ons)
 
@@ -132,6 +160,7 @@ def flip_vertical (digit):
 
 
 def combine (digit_left, digit_right):
+    """Combine two digits by making a XOR of the segments"""
 
     out_ons = [False] * 17
 
@@ -150,6 +179,7 @@ def make_digit_string (digit):
 
 
 def display_comb (combinations, coded_digit):
+    """Diplay the differents combinations that can generate a given digit"""
     if coded_digit in combinations:
         print (combinations [coded_digit])
     else:
@@ -157,6 +187,9 @@ def display_comb (combinations, coded_digit):
 
 
 def print_matches ():
+    """Find out all the possibilities to make the coded message, by 
+    combining letters together"""
+
     # pre compute flips of all digits
     lefts = {key:flip_horizontal (digits [key]) for key in digits}
     rights = {key:flip_vertical (digits [key]) for key in digits}
@@ -186,6 +219,7 @@ def print_matches ():
 
 
 def try_message (line1, line2):
+    """Return the coded combination of a two-lines message"""
     for s1, s2, c in zip (line1, line2, coded):
 
         digit_left = digits [s1]

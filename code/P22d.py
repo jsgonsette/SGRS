@@ -1,3 +1,29 @@
+# MIT License
+
+# Copyright (c) [2020] [Jean-Sébastien Gonsette]
+
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+__author__ = "Jean-Sébastien Gonsette"
+__year__ = 2019
+
+
 import itertools
 import re
 import numpy as np
@@ -173,7 +199,6 @@ def check_towers (words):
         pattern_idx = get_pattern_index (w)
         if pattern_idx >= 0:
 
-            if pattern_idx == 14: print ("[{:02d}]".format (pattern_idx) + " - partial match for " + w )
             result = check_voyels_patterns (w, voyels_patterns [pattern_idx])
             if result: 
                 match_words [pattern_idx].append (w)
@@ -191,7 +216,6 @@ def check_mendeleiev ():
 
 
 
-# check_mendeleiev ()
 
 # Add dictionary, and numbers to solve last tower
 words = get_words ('./code/FR_Simple.txt')
@@ -205,3 +229,7 @@ check_towers (words)
 
 print ("\nNumber of different towers with 25 blocs: " + str (num_towers (25)))
 print ("Which corresponds to the discovery year of Nobelium (No)")
+
+
+print ("\nChecking for Mendeleiev elements")
+check_mendeleiev ()

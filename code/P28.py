@@ -1,4 +1,31 @@
+# MIT License
+
+# Copyright (c) [2020] [Jean-Sébastien Gonsette]
+
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+__author__ = "Jean-Sébastien Gonsette"
+__year__ = 2020
+
+
 def gen_sequence (n):
+    """Generate the tuple corresponding to a number n"""
 
     yield []
     seq = [0]
@@ -24,8 +51,12 @@ def gen_sequence (n):
             if not success: seq = [seq [-1] +1]
 
 def encode (integer):
+    """Encode an integer"""
     
+    # Make a table with the first 200 tuples
     table = list (gen_sequence (200))
+    
+    # Add each tuple corresponding to all bit at 1
     encoded = []
     pos = 0
     while integer >= 1:
@@ -36,13 +67,18 @@ def encode (integer):
 
     return encoded
 
-def decode (coded_list):
 
+def decode (coded_list):
+    """Decode a sequence of tuple to find out the integer"""
+
+    # Encode the first 200 bits
     table = list (gen_sequence (200))
 
     integer = 0
     weight = 1
     pos = 0
+
+    # Build the number by adding all the matching bits
     for item in coded_list:
         while table [pos] != item:
             weight *= 2
@@ -80,4 +116,17 @@ coded = [[],
 ]
 
 print ("\nMysterious number:")
-print (decode (coded))
+decoded = decode (coded)
+print (decoded)
+
+print ("In hex and binary:")
+print (hex (decoded))
+print (bin (decoded))
+
+print ("In hex, it's clear that we have a message in ASCII. Let's decode it")
+line = ''
+while decoded > 0:
+    line = chr (decoded % 256) + line
+    decoded //= 256
+
+print (line)

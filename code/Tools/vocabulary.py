@@ -28,16 +28,25 @@ class Vocabulary:
         progress = 0
 
         while True:
+
+            # Extend possible slicing
             slices_list = self._extend_slices (sentence, slices_list, can_extend)
             if len (slices_list) == 0: return False
-            if len (slices_list) > max_words and max_words > 0: return False
+
+            # Chech length of best solution (in terms of number of words)
+            solution_length = [len (solution) for solution in slices_list]
+            if min (solution_length) > max_words and max_words > 0: return False
+
+            # What is the progress of the best solution
             new_progress = max ([slices [-1] for slices in slices_list])
 
+            # We reach the end of the sentence
             if len (sentence) <= new_progress :
                 for slices in slices_list:
                     if slices [-1] == new_progress: 
                         return len (slices) -1
 
+            # No progress ?
             if new_progress <= progress:
                 return 0
 

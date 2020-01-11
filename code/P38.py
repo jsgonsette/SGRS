@@ -1,3 +1,29 @@
+# MIT License
+
+# Copyright (c) [2020] [Jean-Sébastien Gonsette]
+
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+__author__ = "Jean-Sébastien Gonsette"
+__year__ = 2019
+
+# Cellular Automaton rule
 rule = {
     '000': '0',
     '001': '1',
@@ -9,8 +35,10 @@ rule = {
     '111': '0'
 }
 
+# First line (seed)
 first = '100101001101100001101000110010001000110000100'
 
+# Red squares position
 squares = [
     (2, 6), (6, 6), (12, 6),
     (10, 8),
@@ -31,6 +59,7 @@ squares = [
     (12, 36)
 ]
 
+# Translation table
 braille = {
     '01,00,01' : 'MAJ()',
     '00,00,00' : ' ',
@@ -76,8 +105,9 @@ braille = {
     '10,11,01' : 'ü',
 }
 
-def evolve (row):
 
+def evolve (row):
+    """Compute next row of cellular automaton"""
     row_out = ""
 
     for idx in range (len (row)):
@@ -89,13 +119,16 @@ def evolve (row):
     
     return row_out
 
+
 def extract_square (rows, coo):
+    """Extract a red rectangle content"""
     x, y = coo [0], coo [1]
     r0 = rows [y] [x] + rows [y] [x+1]
     r1 = rows [y+1] [x] + rows [y+1] [x+1]
     r2 = rows [y+2] [x] + rows [y+2] [x+1]
     return r0 + ',' + r1 + ',' + r2
 
+# Compute the cellular full grid
 row = first
 rows = []
 for i in range (39):
@@ -103,6 +136,7 @@ for i in range (39):
     rows.append (row)
     row = evolve (row)
 
+# Extract and translate rectangles
 sentence = ""
 for sq in squares:    
     content = extract_square (rows, sq)
