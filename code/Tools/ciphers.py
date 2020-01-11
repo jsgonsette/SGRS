@@ -55,32 +55,49 @@ def rotate_18 (string, shift):
     return output
 
 
-def vigenere (string, key, reverse=False):
+def vigenere (string, key, reverse=False, skip_unknown=False):
+    """Encrypt/decrypt a string with vigenere.
+
+    string          string to encrypt/decrypt
+    key             Encryption key
+    reverse         True to decrypt
+    skip_unknown    Behavior for unkown character. If true, we do has if it was not there"""
+
     n = len (key)
     output = ""
+    skip = 0
 
     for idx, s in enumerate (string.upper ()):
-        shift = ord (key [idx%n]) - ord ('A') 
+        shift = ord (key [(idx - skip) % n]) - ord ('A') 
         if reverse: shift = -shift
 
         o = ord (s) - ord ('A')
         if o >= 0 and o <= 25:
             o = (o + shift) % 26 + ord ('A')
-        else: o = ord (s)
+        else: 
+            o = ord (s)
+            if skip_unknown: skip += 1
 
         output += chr (o)
     return output
 
 
-def beaufort (string, key):
+def beaufort (string, key, reverse=False, skip_unknown=False):
+    
     n = len (key)
     output = ""
+    skip = 0
 
     for idx, s in enumerate (string.upper ()):
 
-        o = ord (key [idx%n]) - (ord (s) - ord ('A'))
-        if o < ord ('A'): o += 26
-        if o > ord ('Z'): o -= 26
+        shift = ord (key [(idx - skip) % n]) - ord ('A') 
+
+        o = ord (s) - ord ('A')
+        if o >= 0 and o <= 25:
+            o = (shift - o) % 26 + ord ('A')
+        else:
+            o = ord (s)
+            if skip_unknown: skip += 1
 
         output += chr (o)
     return output

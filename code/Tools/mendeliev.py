@@ -63,21 +63,25 @@ mendeleiv_en= [
     'Meitnerium', 'Darmstadtium', 'Roentgenium', 'Copernicium', 'Nihonium', 'Flerovium',
     'Moscovium', 'Livermorium', 'Tennessine', 'Oganesson']    
 
+anagrams = ['Robe', 'Racines', "Melusine", "Ombre", "Truelle", "Etalant", "Epilant", "Plainte", "Pliante"]
 
 def build_mendeleiev_list ():
 
+    # Merge french and english
     mendel_set = set (mendeleiv_fr)
     for item in mendeleiv_en: mendel_set.add (item)
+    for item in anagrams: mendel_set.add (item)
+
     mendel_list = []
     dico_reverse = {}
 
-    keys = ["MENDELEIEV", "DIMITRIMENDELEIEV", "DMITRIMENDELEIEV", "TABLEAUMENDELEIEV", "TABLEAUPERIODIQUE"]
+    keys = ["MENDELEIEV", "DIMITRIMENDELEIEV", "TABLEAUMENDELEIEV", "TABLEAUPERIODIQUE"]
 
     for item in mendel_set:
         
         item = item.upper ()        
         
-        # Add item
+        # Add item in direct and reverse directions
         mendel_list.append (item)
         mendel_list.append (''.join (reversed (item)))
 
@@ -87,14 +91,22 @@ def build_mendeleiev_list ():
             mendel_list.append (encoded)
             dico_reverse [encoded] = item + '/ROT-' + str (i)
 
-        # Add item ciphered with Vigenere
+        # Autoclave with Vigenere
+        encoded = ciphers.vigenere (item, item)
+        mendel_list.append (encoded)
+        dico_reverse [encoded] = item + '/VIG-AUTO'
+
+        # Add item ciphered with Vigenere and Beaufort
         for key in keys:
 
             encoded1 =  ciphers.vigenere (item, key, reverse=False)
             encoded2 =  ciphers.vigenere (item, key, reverse=True)
+            encoded3 =  ciphers.beaufort (item, key)
             mendel_list.append (encoded1)
             mendel_list.append (encoded2)
+            mendel_list.append (encoded3)
             dico_reverse [encoded1] = item + '/VIG-' + key
             dico_reverse [encoded2] = item + '/VIG-R-' + key
+            dico_reverse [encoded3] = item + '/BEAU-' + key
 
     return mendel_list, dico_reverse

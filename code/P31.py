@@ -185,13 +185,18 @@ def check_mendeliev ():
     mendel_list, dico_reverse = build_mendeleiev_list ()
     voc.wiz.dic_add_entries (mendel_list)
 
+    print ("\nSearchin grid A")
     make_proposals (voc, grid_A, grid_dir_A)
+
+    print ("\nSearchin grid B")
     make_proposals (voc, grid_B, grid_dir_B)
+
+    print ("\nSearchin grid C")
     make_proposals (voc, grid_C, grid_dir_C)
 
     print (dico_reverse ['TPEJVN'])
     print (dico_reverse ['RISR'])
-
+    print (dico_reverse ['EAICCA'])
 
 
 # Load dictionary
@@ -212,6 +217,6 @@ if False:
 
 
 # Call this function to check for Mendeleiv words
-if False:
+if True:
     print ("\nChecking for Mendeleiev elements")
     check_mendeliev ()

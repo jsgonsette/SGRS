@@ -23,10 +23,11 @@
 __author__ = "Jean-Sébastien Gonsette"
 __year__ = 2019
 
+import re
 import numpy as np
 from Tools.vocabulary import Vocabulary
 from Tools.countries import countries, cities
-import re
+from Tools.mendeliev import build_mendeleiev_list
 
 def develop_middle (string, direction='up'):
     """Develop each row of the diamond from a starting row"""
@@ -168,6 +169,18 @@ def print_diamond (lines, direction='up'):
         for idx, line in enumerate (lines):
             print (' ' * idx + ' '.join (line) )
 
+
+def check_mendeleiev (rows):
+    mendel_list, dico_reverse = build_mendeleiev_list ()
+
+    for row in rows:
+        for item in mendel_list:
+            if item in row:
+                if len (item) < 4: continue
+                print (item)
+                print (dico_reverse [item])
+
+
 print ("Some checks on the exemple\n----------------")
 print (predic_top ("EXEMPLE"))
 print (predic_top ("EXEMPL"))
@@ -195,7 +208,13 @@ for d in down:
 
 print ("\nSolution\n----------------")
 
-print_diamond (develop_middle ("MONSLALOUVIERENAMUR", direction='up'), direction='up')
-print_diamond (develop_middle ("MONSLALOUVIERENAMUR", direction='down'), direction='down')
+ups = develop_middle ("MONSLALOUVIERENAMUR", direction='up')
+downs = develop_middle ("MONSLALOUVIERENAMUR", direction='down')
+print_diamond (ups, direction='up')
+print_diamond (downs, direction='down')
+
+print ("\nChecking Mendeleiev")
+check_mendeleiev (ups)
+check_mendeleiev (downs)
 
 exit ()
