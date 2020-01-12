@@ -13,7 +13,12 @@
 - Dans le commentaire final:
 blabla de JS...
 Nous avons pris énormément de plaisirs à tenter de résoudre vos énigmes. Les mots nous manquent tellement nous avons trouver vos énigmes très bien équilibrées, ni trop évidentes, ni trop tordues.
-Comme le veut l'adage, il vaut mieux une bonne énigme qu'un long discours. WPIQ=2, Cbryibbeg=3 rfg y'vaqvpr qr abger ravtzr cbhe nhgnag dhr ibhf ra nlrm orfbva...**
+Comme le veut l'adage, il vaut mieux une bonne énigme qu'un long discours. 
+**WPIQ=2, Cbryibbeg=3 rfg y'vaqvpr qr abger ravtzr cbhe nhgnag dhr ibhf ra nlrm orfbva...**
+
+ou alors
+
+**"WPIQ ra n 2 znvf Cbryibbeg ra n 3" rfg y'vaqvpr qr abger ravtzr cbhe nhgnag dhr ibhf ra nlrm orfbva...**
 
 ca devrait les aiguiller sur la methode de décodage de notre message crypté ds les commentaires de chaque täche. On selectionnerait des lettres en gras et en italique pour former une lettre en Bacon par täche.
 
