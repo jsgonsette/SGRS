@@ -215,6 +215,12 @@ def check_mendeleiev ():
     exit ()
 
 
+def print_tower (word):
+
+    towers = make_towers (make_rows (word))
+    print ('\n' + word + ':')
+    for row in towers [0]:
+        print (row)
 
 
 # Add dictionary, and numbers to solve last tower

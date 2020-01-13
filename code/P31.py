@@ -217,6 +217,6 @@ if False:
 
 
 # Call this function to check for Mendeleiv words
-if True:
+if False:
     print ("\nChecking for Mendeleiev elements")
     check_mendeliev ()

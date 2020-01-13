@@ -32,7 +32,7 @@ import io
 import itertools as it
 
 
-grid =[
+GRID =[
     'HDIIGRBQGEGQGBIH-',
     'VIUVBSSY-CQSCBCVB',
     'UIKI-EOEB   -  JR',
@@ -63,11 +63,40 @@ def grid_rot (grid, shift):
     new_grid = [ciphers.rotate (line, shift) for line in grid]
     return new_grid
 
+
+def grid_vigenere (grid, key):
+
+    width = len (grid [0])
+    height = len (grid)
+
+    string_h = ''.join (grid)
+    string_v = ''.join (grid_transpose (grid))
+
+    grids = []
+
+    # Test different encryption methods, horz or vertically, in reverse or not, with two behaviors for the yellow boxes
+    for function in (ciphers.vigenere, ciphers.beaufort):
+        for string, step in ((string_h, width), (string_v, height)):
+            for reverse in (True, False):
+                for skip in (True, False):
+
+                    # Encryption
+                    encoded = function (string, key, reverse=reverse, skip_unknown=skip)
+                
+                    # Reshape grid
+                    grid = [encoded [idx:idx+step] for idx in range (0, width*height, step)]
+                    if step == height:
+                        grid = grid_transpose (grid)
+                    grids.append (grid)
+
+    return grids
+
+
 def grid_print (grid):
     """Print the grid content"""
     for line in grid:
         print (' '.join (line))
-
+    
 def grid_transpose (grid):
     """Return a transposed copy of the grid"""
     new_grid = []
@@ -120,7 +149,7 @@ def grid_get_extracts_around (grid, x, y):
     width= len (grid [0])
     height= len (grid)
 
-    extracts = []
+    extracts = set ()
 
     # Try all rectangles fitting in the grid, and including the box (x, y)
     for cx in range (0, x+1):
@@ -135,7 +164,8 @@ def grid_get_extracts_around (grid, x, y):
                     if flat.count (' ') > 0: continue
                     
                     # Now read the content of this extract in different ways
-                    extracts.extend (read_rectangle (extract))
+                    for content in read_rectangle (extract):
+                        extracts.add (content)
 
     return extracts
 
@@ -159,7 +189,81 @@ def get_words (path):
 
 
 
-# Make a dictionary with the animal names
+def decrypt_first (voc, animals_list, coordinates, keys):
+    """Decrypt the grid first, then look in every rectangle"""
+
+     # Encrypt grid globally, try each key
+    for key in keys:
+
+        print ("\nTest key [{}]".format (key))
+    
+        # Iterat on all possible ways to encrypt a grid with a key
+        encrypted_grids = grid_vigenere (GRID, key)
+        for grid in encrypted_grids:
+
+            # print ("-" * 30)
+            # grid_print (grid)
+
+            # Test all number coordinates
+            for x, y in coordinates:
+
+                # Extract all possible rectangles
+                extracts = grid_get_extracts_around (grid, x, y)
+                extracts = sorted (extracts, key=lambda x: len (x))
+
+                # Test each rectangle
+                for extract in extracts:
+                    if len (extract) < 4: continue
+                    extract = extract.replace ('-', '')
+                   
+                    if voc.is_valid_word (extract): print ('{} around {} with key {}'.format (extract, (x, y), key))
+                    if extract [0:2] in ('UN', 'LE', 'LA') and len (extract) >= 4:
+                        if voc.is_valid_word (extract[2::]): print ('{} from {} with key {}'.format (extract, extract, key))
+                    if extract [0:3] in ('UNE', 'LES', 'DES') and len (extract) >= 5:
+                        if voc.is_valid_word (extract[3::]): print ('{} from {} with key {}'.format (extract, extract, key))
+
+
+def extract_first (voc, animals_list, coordinates, keys):
+    """Extract all rectangles, decrypt them, and check content"""
+
+    # Test all coordinates
+    count = 0
+    for x, y in coordinates:
+
+        # Extract all possible rectangles
+        print ('\nTest around {}, {}'.format (x, y))
+        extracts = grid_get_extracts_around (GRID, x, y)
+        extracts = sorted (extracts, key=lambda x: len (x))
+
+        # Test each rectangle with each key
+        for extract in extracts:
+            if len (extract) < 6: continue
+            count += 1
+
+            for key in keys:
+
+                key = key.upper ()
+                plain_0 = ciphers.vigenere (extract, key, reverse=True).replace ('-', '')
+                plain_1 = ciphers.vigenere (extract, key, reverse=False).replace ('-', '')
+                plain_2 = ciphers.vigenere (extract.replace ('-', ''), key, reverse=True)
+                plain_3 = ciphers.vigenere (extract.replace ('-', ''), key, reverse=False)
+                plain_4 = ciphers.beaufort (extract, key).replace ('-', '')
+                plain_5 = ciphers.beaufort (extract.replace ('-', ''), key)
+        
+                for plain in (plain_0, plain_1, plain_2, plain_3, plain_4, plain_5):
+                    if voc.is_valid_word (plain): print ('{} from {} with key {}'.format (plain, extract, key))
+                    if plain [0:2] in ('UN', 'LE', 'LA') and len (extract) >= 4:
+                        if voc.is_valid_word (plain[2::]): print ('{} from {} with key {}'.format (plain, extract, key))
+                    if plain [0:3] in ('UNE', 'LES', 'DES') and len (extract) >= 5:
+                        if voc.is_valid_word (plain[3::]): print ('{} from {} with key {}'.format (plain, extract, key))
+
+
+    print ("{} rectangles tested".format (count))
+
+
+
+
+# Make a dictionary with the animal names (quick to find correspondance)
 WIZ_PATH = './code/Tools/libWizium.dll'
 DICO_PATH = './code/Animaux.txt'
 voc = Vocabulary (WIZ_PATH, DICO_PATH)
@@ -170,42 +274,14 @@ animals = get_words (DICO_PATH)
 # Coordinates of the numbers in the grid
 coordinates = [(1,8), (2,4), (4,2), (4,8), (7,3), (7,7), (8,1), (10,9), (12,5), (15,4), (15,7), (16,0)]
 
-# Candidates keys
+# Candidate keys
 keys = list (mendeleiv_fr)
-keys.extend (animals)
-keys.extend ('BCDEFGHIJKLMNOPQRSTUVWXYZ')
-keys.extend (['LI', 'BE', 'NE', 'NA', 'MG', 'AL', 'SI', 'CL', 'AR', 'CA', 
-    'SC', 'TI', 'CR', 'MN', 'FE', 'CO', 'NI', 'CU', 'ZN', 'GA', 'GE', 'AS', 
-    'SE', 'BR', 'KR', 'RB', 'SR', 'ZR', 'NB', 'MO', 'TC', 'RU', 'RH', 'PD', 
-    'AG', 'CD', 'IN', 'SN', 'SB', 'TE', 'XE'])
+keys.extend (['AIGLE', 'BUSARD', 'EPERVIER', 'Accipitridae', 'AUTOUR', 'AUTOURDESPALOMBES', 'Accipiter', 'gentilis', 'Accipitergentilis'])
 keys = [k.upper () for k in keys]
 
-# Test all coordinates
-count = 0
-for x, y in coordinates:
+# Search, and find nothing, snif :'(
+print ('\nDECRYPT THE GRID FIRST, THEN SEARCH')
+decrypt_first (voc, animals, coordinates, keys)
 
-    # Extract all possible rectangles
-    print ('\nTest around {}, {}'.format (x, y))
-    extracts = grid_get_extracts_around (grid, x, y)
-    extracts = sorted (extracts, key=lambda x: len (x))
-
-    # Test each rectangle with each key
-    for extract in extracts:
-        if len (extract) < 6: continue
-        count += 1
-
-        for key in keys:
-
-            key = key.upper ()
-            plain_0 = ciphers.vigenere (extract, key, reverse=True).replace ('-', '')
-            plain_1 = ciphers.vigenere (extract, key, reverse=False).replace ('-', '')
-            plain_2 = ciphers.vigenere (extract.replace ('-', ''), key, reverse=True)
-            plain_3 = ciphers.vigenere (extract.replace ('-', ''), key, reverse=False)
-    
-            for plain in (plain_0, plain_1, plain_2, plain_3):
-                if voc.is_valid_word (plain): print ('{} from {} with key {}'.format (plain, extract, key))
-
-
-print ("{} rectangles tested".format (count))
-
-
+print ('\nEXTRACT RECTANGLES, THEN DECRYPT')
+extract_first (voc, animals, coordinates, keys)

@@ -55,6 +55,46 @@ def rotate_18 (string, shift):
     return output
 
 
+def bacon (string, reverse=False):
+
+    dic = {
+        'A': '00000',
+        'B': '00001',
+        'C': '00010',
+        'D': '00011',
+        'E': '00100',
+        'F': '00101',
+        'G': '00110',
+        'H': '00111',
+        'I': '01000',
+        'J': '01000',
+        'K': '01001',
+        'L': '01010',
+        'M': '01011',
+        'N': '01100',
+        'O': '01101',
+        'P': '01110',
+        'Q': '01111',
+        'R': '10000',
+        'S': '10001',
+        'T': '10010',
+        'U': '10011',
+        'V': '10011',
+        'W': '10100',
+        'X': '10101',
+        'Y': '10110',
+        'Z': '10111',
+    }
+
+    dic_rev = dict((v, k) for k, v in dic.items())
+
+    if reverse==False:
+        return ''.join ([dic.get (s, '?') for s in string.upper ()])
+    else:
+        return ''.join ([dic_rev.get (string [idx:idx+5], '?') for idx in range (0, len (string), 5)])
+
+
+
 def vigenere (string, key, reverse=False, skip_unknown=False):
     """Encrypt/decrypt a string with vigenere.
 
@@ -169,12 +209,44 @@ def play_fair (string, key, reverse=False):
     return output
 
 
-def letter36_to_idx (letter):
+def base64_decode_binstring (binstring):
 
-    o = ord (letter)
-    if o >= ord ('A') and o <= ord ('Z'): return o - ord ('A')
-    elif o >= ord ('0') and o <= ord ('9'): return o - ord ('0') + 26
-    return -1
+    slices = [binstring [idx:idx+6] for idx in range (0, len (binstring), 6)]
+    values = [int (s, 2) for s in slices]
+
+    def translate (value):
+        if value < 26: return chr (value + ord ('A'))
+        elif value < 52: return chr (value-26 + ord ('a'))
+        elif value < 62: return chr (value-52 + ord ('0'))
+        elif value == 62: return '+'
+        else: return '/'
+
+    return ''.join ([translate (v) for v in values])
+
+
+def ascii_encode_binstring (string):
+    return ''.join (['{:08b}'.format (ord (s)) for s in string])
+
+def ascii_decode_binstring (binstring):
+
+    slices = [binstring [idx:idx+8] for idx in range (0, len (binstring), 8)]
+    values = [int (s, 2) for s in slices]
+    return ''.join ([chr (v) for v in values])
+
+def binstring_negate (binstring):
+    return ''.join (['1' if s == '0' else '0' for s in binstring])
+
+def binstring_reversal (binstring):
+    
+    def negate (bin_string):
+        return ''.join ('1' if s == '0' else '0' for s in bin_string)
+
+    strings = [''] * 4
+    strings [0] = binstring
+    strings [1] = ''.join (reversed (binstring))
+    strings [2] = negate (binstring)
+    strings [3] = ''.join (reversed (negate (binstring)))
+    return strings
 
 
 def adfgvx (string, key, square, reverse=False, use_null=True):

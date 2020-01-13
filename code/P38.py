@@ -20,6 +20,9 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+import Tools.ciphers as ciphers
+import base64
+
 __author__ = "Jean-Sébastien Gonsette"
 __year__ = 2019
 
@@ -36,7 +39,8 @@ rule = {
 }
 
 # First line (seed)
-first = '100101001101100001101000110010001000110000100'
+FIRST = '100101001101100001101000110010001000110000100'
+HEIGHT = 39
 
 # Red squares position
 squares = [
@@ -99,7 +103,7 @@ braille = {
     '11,00,01' : 'î',
     '11,11,01' : 'ï',
     '11,01,01' : 'ô',
-    '01,10,01' : 'oe',
+    '01,10,01' : 'œ',
     '01,11,11' : 'ù',
     '10,01,01' : 'û',
     '10,11,01' : 'ü',
@@ -128,10 +132,34 @@ def extract_square (rows, coo):
     r2 = rows [y+2] [x] + rows [y+2] [x+1]
     return r0 + ',' + r1 + ',' + r2
 
+
+def check_mendeleiev (rows):
+
+    for row in rows:
+
+        binstrings = ciphers.binstring_reversal (row)
+        strings_ascii = [ciphers.ascii_decode_binstring (s) for s in binstrings]
+        strings_base64 = [ciphers.base64_decode_binstring (s) for s in binstrings]
+        
+        for s in strings_ascii: print (s)
+        for s in strings_base64: 
+            print (s)
+
+
+    for y in range (HEIGHT -2):
+        line = ''
+        for x in range (len (FIRST) -1):
+            content = extract_square (rows, (x, y))
+            letter = braille.get (content, '.').replace ('MAJ()', '.')
+            line += letter
+        print (line)
+            
+
+
 # Compute the cellular full grid
-row = first
+row = FIRST
 rows = []
-for i in range (39):
+for i in range (HEIGHT):
     print (row.replace ('0', '.').replace ('1', '#'))
     rows.append (row)
     row = evolve (row)
@@ -146,5 +174,9 @@ for sq in squares:
         sentence += '.'
         print ("Unknown: " + content)
 
+print ("\nMessage in red rectangles:")
 print (sentence)
 
+if False:
+    print ("\nCheck for Mendeleiev items")
+    check_mendeleiev (rows)
