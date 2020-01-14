@@ -9,7 +9,7 @@ Breaking through SGRS 2019 Challenge - [lien](https://www.mil.be/fr/communiques-
 ## Ressources utiles
 
 1. Number theory: [Crazy numbers](https://www.crazy-numbers.com/)
-2. Codage et annagrammes: [DCode](https://www.dcode.fr/)
+2. Codage et annagrammes: [DCode](https://www.dcode.fr/), [anagrammeur](http://www.anagrammeur.com/anagrammeur.php]
 3. Une description presque hexaustive de tout types de puzzles: [Cross+A](http://www.cross-plus-a.com)
 
 
@@ -22,8 +22,9 @@ Breaking through SGRS 2019 Challenge - [lien](https://www.mil.be/fr/communiques-
 5. Rotation des lettres dans un mot
 6. Les notes de musique
 7. Les éléments du tableau périodique
-8. Jeux en général: Combat naval, Echec, Stratego
-9. Codages tels que le [Braille](https://fr.wikipedia.org/wiki/Braille), le [Morse](https://fr.wikipedia.org/wiki/Code_Morse_international), les [Tap codes](https://fr.wikipedia.org/wiki/Tap_code), les [Sémaphores](https://fr.wikipedia.org/wiki/Alphabet_s%C3%A9maphore)
+8. Code couleur résistances
+9. Jeux en général: Combat naval, Echec, Stratego
+10. Codages tels que le [Braille](https://fr.wikipedia.org/wiki/Braille), le [Morse](https://fr.wikipedia.org/wiki/Code_Morse_international), les [Tap codes](https://fr.wikipedia.org/wiki/Tap_code), les [Sémaphores](https://fr.wikipedia.org/wiki/Alphabet_s%C3%A9maphore)
 
 
 ## Progrès
