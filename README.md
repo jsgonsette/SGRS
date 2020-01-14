@@ -9,7 +9,7 @@ Breaking through SGRS 2019 Challenge - [lien](https://www.mil.be/fr/communiques-
 ## Ressources utiles
 
 1. Number theory: [Crazy numbers](https://www.crazy-numbers.com/)
-2. Codage et annagrammes: [DCode](https://www.dcode.fr/), [anagrammeur](http://www.anagrammeur.com/anagrammeur.php]
+2. Codage et annagrammes: [DCode](https://www.dcode.fr/), [anagrammeur](http://www.anagrammeur.com/anagrammeur.php)
 3. Une description presque hexaustive de tout types de puzzles: [Cross+A](http://www.cross-plus-a.com)
 
 
