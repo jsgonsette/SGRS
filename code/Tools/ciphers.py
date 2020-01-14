@@ -227,14 +227,17 @@ def base64_decode_binstring (binstring):
 def ascii_encode_binstring (string):
     return ''.join (['{:08b}'.format (ord (s)) for s in string])
 
-def ascii_decode_binstring (binstring):
+def ascii_decode_binstring (binstring, numbits=8):
 
-    slices = [binstring [idx:idx+8] for idx in range (0, len (binstring), 8)]
+    slices = [binstring [idx:idx+numbits] for idx in range (0, len (binstring), numbits)]
     values = [int (s, 2) for s in slices]
     return ''.join ([chr (v) for v in values])
 
 def binstring_negate (binstring):
     return ''.join (['1' if s == '0' else '0' for s in binstring])
+
+def binstring_slice (binstring, length):
+    return [binstring [idx:idx+length] for idx in range (0, len (binstring), length)]
 
 def binstring_reversal (binstring):
     
