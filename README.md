@@ -1,10 +1,36 @@
 # SGRS 2019
-Breaking through SGRS 2019 Challenge - [lien](https://www.mil.be/fr/communiques-presse/les-enigmes-du-sgrs-sont-de-retour)
+Breaking through the SGRS 2019 Challenge - [lien](https://www.mil.be/fr/communiques-presse/les-enigmes-du-sgrs-sont-de-retour)
 
 * [Questionnaire 2019 (français)](./doc/SGRS%202019.pdf)
 * [Questionnaire 2019 (néerlandais)](./doc/SGRS%202019%20-%20NL.pdf)
 * [Questionnaire 2018](./doc/SGRS%202018.pdf)
 * [Questionnaire 2018 - solutions](./doc/SGRS%202018%20-%20Soluce.pdf)
+
+## Avant propos
+
+Bienvenue sur cette page qui a été, pendant trois intenses semaines, le centre névralgique grâce auquel nous avons pu participer au concours organisé par le SGRS en 2019. L'idée était de pouvoir traquer facilement le progrès effectué sur les différentes énigmes, tout en consignant nos différentes idées et tentatives, qu'elles aient été fructueuses ou pas.
+
+Le but de ce projet GitHub n'est en aucun cas d'expliquer les solutions aux différentes énigmes du concours, nous laissons ce soin aux auteurs du puzzle. Au contraire, comme ce projet a été gelé peu après la remise de notre formulaire de participation, il reflète plutôt exactement jusqu'où nous avons pu progresser. Aussi ne se trouve ici que les résolutions des énigmes sur lesquelles nous avons pu avancer.
+
+Le point de départ vient du tableau ci-dessous, qui reprend des liens vers différentes sous-pages - une par énigime - et qui permet en un coup d'oeil de voir le statut de chacune d'elles. Les liens permettent ensuite d'atterrir sur des explications plus détaillées, propres à chaque problème.
+
+Certaines explications sont assez académiques, dans le sens où une brève analyse, suivie d'une résolution, se succèdent sans détour. Cela traduit simplement le fait que nous avons trouvé la solution de ces énigmes rapidement. Au contraire, certaines pages révèlent une intense dialectique, des idées plus ou moins concluantes ou des commentaires en tout genre, menant finalement à un dénouement, ou pas. Ces pages sont restées telles quelles et témoignent ainsi du chemin tortueux qui peut mener à une solution, ou sur lequel on peut se perdre. Enfin, certaines pages sont restées vides, lorsque nous n'avions pas même l'ombre d'une piste.
+
+Sur 43 énigmes, un tiers environ ont été résolues en s'aidant de programmes informatiques ad hoc. Le langage Python est un langage de choix pour ce type d'exercice, car son environnement très riche, couplé à sa capacité d'exprimer rapidement des idées, autorise de tester beaucoup d'hypothèses. Bien sûr, en aucun cas un programme ne peut se substituer à la créativité et à la perspicacité hummaine, particulièrement indispensable ici. Mais il arme toutefois l'esprit, comme une épée prolonge la dextérité d'un bras, en systématisant et en décuplant sa rapidité d'exécution.
+
+Avant de tourner définitivement la page de cette épopée, je tiens à remercier tous ceux qui m'ont accompagné dans cette aventure. Que ce soit par une participation intense pour certains, ou tout simplement pour m'avoir écouté ne parler que de ça pour d'autres, beaucoup de personnes ont contribué de près ou de loin au résultat final.
+
+Pour finir, je ne voudrais pas oublier de remercier les auteurs de ce puzzle qui, part leur créativié, leur ingéniosité et certainement beaucoup de travail, nous ont concocté un superbe cadeau de Noël. Il est très rare que je trouve les questions d'un concours un temps soit peu intéressantes.
+
+**Le véritable sage n'est pas celui qui répond aux questions, c'est celui qui les pose**.
+
+### Hall of fame
+
+* **Michaël Devuyst**, pour avoir découpé la figure, même si nous n'avons pas pu aller plus loin;
+* **Olivier Delbeke**, pour m'avoir informé du concours, pour avoir fait tourner la machine et pour l'agencement des allumettes;
+* **Jean-François Meessen**, pour avoir su assembler les pièces du puzzle clé et pour avoir trouvé l'astronaute;
+* **Charles-Etienne Gonsette**, qui a su lire en sens inverse, trouver son chemin dans le triptyque, trouver son chemin vers l'Antarctique et déclarer sa flamme à Alice;
+* Enfin, last but not least, **Baudouin Duchêne**, dont l'AZERTY et le binaire n'ont plus de secret pour lui, qui a trouvé l'arc-en-ciel, qui a appris à parler russe, qui a su interpréter les codes de la résistance, déchiffrer les journaux hostiles, rétablir la communication, interpréter le sens des flèches, faire tourner le phénakistiscope, trouvé la clé du puzzle, rassemblé le tableau de Mendeleïev, et j'en passe. Cela constitue un beau palmarès, mais l'histoire ne dit pas quelle part de mérite attribuer à son épouse **Elodie Niset** ;-)  
 
 ## Ressources utiles
 
