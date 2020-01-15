@@ -106,3 +106,7 @@ La table ci dessous permet d'avoir un aperçu rapide de l'état d'avancement. De
 |[42 - wiki](wiki/P42.md)  | Question cachée                       |  OK  | 3 |                      |
 |[43 - wiki](wiki/P43.md)  | **150 ans du tableau de Mendeleïev**  |      |25 |                      |
 |[Rep - wiki](wiki/Reponse.md)| **Reponse Enigme**  |      | |                      |
+
+## Pour finir
+Une petite touche d'humour de circonstance.
+![Puzzles](Puzzles.jpg)
