@@ -10,7 +10,7 @@ Breaking through the SGRS 2019 Challenge - [lien](https://www.mil.be/fr/communiq
 
 Bienvenue sur cette page qui a été, pendant trois intenses semaines, le centre névralgique grâce auquel nous avons pu participer au concours organisé par le SGRS en 2019. L'idée était de pouvoir traquer facilement le progrès effectué sur les différentes énigmes, tout en consignant nos différentes idées et tentatives, qu'elles aient été fructueuses ou pas.
 
-Le but de ce projet GitHub n'est en aucun cas d'expliquer les solutions aux différentes énigmes du concours, nous laissons ce soin aux auteurs du puzzle. Au contraire, comme ce projet a été gelé peu après la remise de notre formulaire de participation, il reflète plutôt exactement jusqu'où nous avons pu progresser. Aussi ne se trouve ici que les résolutions des énigmes sur lesquelles nous avons pu avancer.
+Le but de ce projet GitHub n'est en aucun cas d'expliquer les solutions aux différentes énigmes du concours, nous laissons ce soin aux auteurs du puzzle. Au contraire, comme ce projet a été gelé peu après la remise de notre formulaire de participation, il reflète plutôt exactement jusqu'où nous avons pu progresser. Aussi ne se trouve ici que les résolutions des énigmes sur lesquelles nous avons pu avancer (et agrémentées d'erreurs éventuelles).
 
 Le point de départ vient du tableau ci-dessous, qui reprend des liens vers différentes sous-pages - une par énigime - et qui permet en un coup d'oeil de voir le statut de chacune d'elles. Les liens permettent ensuite d'atterrir sur des explications plus détaillées, propres à chaque problème.
 
